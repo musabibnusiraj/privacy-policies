@@ -8,40 +8,66 @@ Thank you for choosing SuccessCall ("we," "us," "our"). This Privacy Policy is m
 
 ### Location Data
 
-SuccessCall requires access to your device's location to provide its core functionality.
+SuccessCall **does not** collect, access, or use your device's location data.
 
-*   **Why we need it:** Your geographic location (latitude and longitude) is used to accurately calculate Islamic prayer times (Fajr, Dhuhr, Asr, Maghrib, Isha) and determine the Qibla direction.
-*   **How we use it:** This location data is used locally on your device only. It is **not** stored, saved on any server, or shared with any third party. The calculation happens entirely on your device.
+*   **How prayer times work:** The app uses a zone-based system where you manually select your prayer zone from predefined areas in Sri Lanka (Colombo, Gampaha, Kalutara, Jaffna, Mullaitivu, Kilinochchi, Vavuniya, Mannar, and Puttalam districts). Prayer times are calculated based on your selected zone, not your GPS location.
+*   **No GPS required:** Your selection is stored locally on your device and is not transmitted anywhere.
 
 ### Personal Information
 
 We do not collect any personally identifiable information. You can use SuccessCall without creating an account or providing any personal data like your name, email address, or phone number.
 
-### Usage Data (Analytics)
+### App Preferences and Settings
 
-To help us improve the App, we may collect anonymous, non-personal usage data. This may include information like crash reports, app performance data, and which features are used most often. This data is aggregated and cannot be used to identify you personally.
+The app stores your preferences locally on your device using secure local storage. This includes:
+*   Selected prayer zone (Zone1-Zone4)
+*   Selected mosque for prayer time adjustments
+*   Prayer notification preferences
+*   Iqamah time adjustments for each prayer
+*   Display preferences (theme, language, clock style)
+
+This data is stored only on your device and is never sent to any server or third party.
 
 ## How We Use Your Information
 
-The information we collect is used solely for the following purposes:
+Your locally stored preferences are used solely for the following purposes:
 
-*   To provide and maintain the core features of the App, such as displaying accurate prayer times and sending prayer notifications.
-*   To understand and analyze how you use our App so we can improve its functionality, performance, and user experience.
-*   To ensure the stability of the App and fix crashes.
+*   To provide and maintain the core features of the App, such as displaying accurate prayer times based on your selected zone and sending prayer notifications.
+*   To remember your preferences (zone selection, mosque, iqamah times, theme, language) between app sessions.
+*   To customize your prayer notifications according to your preferences.
 
 ## Data Sharing and Disclosure
 
-We respect your privacy. We do not sell, trade, or share your personal information or location data with any third-party companies, organizations, or individuals for any purpose, including marketing or advertising.
+We respect your privacy. Since all data is stored only on your device, we have no data to share, sell, or trade.
 
-The only exception would be in response to a legal obligation, such as a court order or government request, if we are required to do so by law.
+*   **No data transmission:** Your preferences and settings never leave your device.
+*   **No third-party services:** We do not use any third-party analytics, advertising, or tracking services.
+*   **No servers:** The app does not connect to any backend servers or cloud services.
 
 ## Data Security
 
-We are committed to protecting your data. Since location data is processed only on your device and not stored, the risk of a remote data breach is minimized. We take reasonable measures to protect the anonymous usage data we collect.
+We are committed to protecting your privacy. Since all your preferences are stored only on your device using Flutter's secure local storage (SharedPreferences), and no data is transmitted over the network:
+
+*   There is no risk of a remote data breach.
+*   Your data is protected by your device's security measures.
+*   Uninstalling the app will remove all stored preferences from your device.
+
+## Permissions
+
+The app requests the following permissions:
+
+*   **Notifications (POST_NOTIFICATIONS):** Required to send you prayer time reminders and notifications. You can disable notifications at any time in the app settings or your device settings.
+
+The app does **not** request or use:
+*   Location permissions
+*   Camera or microphone access
+*   Contact list access
+*   Storage permissions (beyond standard app data)
+*   Internet access (the app works fully offline)
 
 ## Children's Privacy
 
-Our App is not intended for use by anyone under the age of 13. We do not knowingly collect any information from children under 13. If you believe we have inadvertently collected such information, please contact us so we can promptly remove it.
+Our App is suitable for users of all ages. Since we do not collect, store, or transmit any personal information, there are no privacy concerns specific to children. The app can be safely used by anyone.
 
 ## Changes to This Privacy Policy
 
@@ -51,4 +77,4 @@ We may update our Privacy Policy from time to time. We will notify you of any ch
 
 If you have any questions or suggestions about our Privacy Policy, do not hesitate to contact us at:
 
-**[YOUR_CONTACT_EMAIL@EXAMPLE.COM]**
+**[msaub.dot@gmail.com]**
