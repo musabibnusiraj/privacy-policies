@@ -1,5 +1,6 @@
 Return Policy for SuccessCall
-Last Updated: November 23, 2025
+
+Last Updated: May 11, 2026
 Overview
 SuccessCall is a free mobile application available at no cost on the Google Play Store and Apple App Store. There is no purchase price, subscription fee, or in-app purchase required to use any feature of the App.
 
