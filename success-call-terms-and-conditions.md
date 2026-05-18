@@ -84,4 +84,4 @@ These Terms shall be governed by and construed in accordance with the laws of Sr
 If any provision of these Terms is found to be unenforceable or invalid, that provision will be limited to the minimum extent necessary, and the remaining provisions will continue in full force and effect.
 
 14. Contact Us
-If you have any questions about these Terms and Conditions, please contact us at: musabibnsiraj@gmail.com
+If you have any questions about these Terms and Conditions, please contact us at: musabibnsiraj@gmail.com or https://musabibnusiraj.github.io/

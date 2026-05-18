@@ -83,4 +83,4 @@ We may update our Privacy Policy from time to time. We will notify you of any ch
 
 ## Contact Us
 
-If you have any questions or suggestions about our Privacy Policy, do not hesitate to contact us at: musabibnsiraj@gmail.com
+If you have any questions or suggestions about our Privacy Policy, do not hesitate to contact us at: musabibnsiraj@gmail.com or https://musabibnusiraj.github.io/
