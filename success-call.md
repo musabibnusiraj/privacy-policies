@@ -1,6 +1,6 @@
 # Privacy Policy for SuccessCall
 
-**Last Updated:** November 23, 2025
+**Last Updated:** May 18, 2026
 
 Thank you for choosing SuccessCall ("we," "us," "our"). This Privacy Policy is meant to help you understand what information we collect, why we collect it, and how you can manage it. This policy applies to our mobile application, SuccessCall (the "App").
 
@@ -65,6 +65,14 @@ The app does **not** request or use:
 *   Storage permissions (beyond standard app data)
 *   Internet access (the app works fully offline)
 
+## Cookies and Tracking Technologies
+
+SuccessCall does not use cookies, third-party analytics, or tracking technologies. The App works fully offline and does not transmit usage or behavioral data to any third parties.
+
+## Third-Party Payment Processors
+
+If you choose to make a donation through the App, payment processing will be handled by a third-party payment provider. We do not collect or store your full payment card details — those are processed directly by the payment provider and are subject to their privacy and refund policies.
+
 ## Children's Privacy
 
 Our App is suitable for users of all ages. Since we do not collect, store, or transmit any personal information, there are no privacy concerns specific to children. The app can be safely used by anyone.
@@ -75,6 +83,4 @@ We may update our Privacy Policy from time to time. We will notify you of any ch
 
 ## Contact Us
 
-If you have any questions or suggestions about our Privacy Policy, do not hesitate to contact us at:
-
-**[msaub.dot@gmail.com]**
+If you have any questions or suggestions about our Privacy Policy, do not hesitate to contact us at: musabibnsiraj@gmail.com

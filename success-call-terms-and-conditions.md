@@ -1,6 +1,6 @@
 Business Terms & Conditions for SuccessCall
 
-Last Updated: May 11 2026
+Last Updated: May 18, 2026
 Please read these Terms and Conditions ("Terms," "Terms and Conditions") carefully before using the SuccessCall mobile application (the "App") operated by SuccessCall ("we," "us," "our").
 By downloading, installing, or using the App, you agree to be bound by these Terms. If you disagree with any part of the terms, you may not access the App.
 
@@ -37,13 +37,15 @@ The App and its original content, features, and functionality are and will remai
 You are granted a limited, non-exclusive, non-transferable, revocable license to use the App strictly in accordance with these Terms.
 
 5. Donations
+
 SuccessCall is free to use. An optional donate button is available for users who wish to voluntarily support the development and maintenance of the App.
 
-All donations are voluntary and non-refundable
-No goods, services, or additional features are provided in exchange for donations
-Donations do not create any contractual obligation on the part of SuccessCall
-By donating, you confirm the transaction is authorized and made willingly
+- **Voluntary:** All donations are voluntary.
+- **Non-refundable:** Donations are final and non-refundable unless otherwise required by applicable law.
+- **No exchange of goods or services:** No goods, services, or additional features are provided in exchange for donations.
+- **No contractual obligation:** Donations do not create any contractual obligation on the part of SuccessCall.
 
+By donating, you confirm the transaction is authorized and made willingly. Payment processing for donations may be handled by a third-party payment provider and is subject to that provider's terms and privacy policy.
 
 6. Prayer Time Accuracy
 While we strive to provide accurate prayer times, SuccessCall makes no warranty or guarantee regarding the absolute accuracy of prayer times displayed in the App. Prayer times are calculated based on established Islamic jurisprudence methods and predefined zones. We recommend users verify prayer times with their local mosque or Islamic authority when required.
@@ -82,5 +84,4 @@ These Terms shall be governed by and construed in accordance with the laws of Sr
 If any provision of these Terms is found to be unenforceable or invalid, that provision will be limited to the minimum extent necessary, and the remaining provisions will continue in full force and effect.
 
 14. Contact Us
-If you have any questions about these Terms and Conditions, please contact us at:
-[msaub.dot@gmail.com]
+If you have any questions about these Terms and Conditions, please contact us at: musabibnsiraj@gmail.com

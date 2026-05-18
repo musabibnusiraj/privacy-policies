@@ -1,34 +1,34 @@
-Return Policy for SuccessCall
+Refund Policy for SuccessCall
 
-Last Updated: May 11, 2026
-Overview
-SuccessCall is a free mobile application available at no cost on the Google Play Store and Apple App Store. There is no purchase price, subscription fee, or in-app purchase required to use any feature of the App.
+Last Updated: May 18, 2026
 
-Donations
-SuccessCall offers an optional donate button to allow users who wish to voluntarily support the continued development and maintenance of the App.
-Voluntary Nature of Donations
+Thank you for using SuccessCall. The App is provided free of charge and there are no purchases required to access its features. However, the App offers an optional donate button to allow users to voluntarily support development and maintenance. This Refund Policy explains our refund and return practices related to donations and the App.
 
-All donations made through the App are entirely voluntary
-Donations are not required to access any feature of the App
-Making a donation does not entitle the donor to any additional features, services, or benefits
+Returns
 
-No Refund Policy for Donations
-All donations are final and non-refundable. By making a donation, you acknowledge and agree that:
+Because the App is free to download and use, there are no returns applicable to the App itself. For any digital content or donations made through the App, please refer to the sections below.
 
-Donations cannot be reversed, refunded, or exchanged once processed
-No goods or services are provided in exchange for your donation
-SuccessCall has no obligation to refund any donated amount under any circumstances
+Refunds (Donations)
 
-If you believe a donation was made in error or without your authorization, please contact your payment provider or card issuer directly to dispute the transaction.
+All donations made through the App are voluntary and final. By making a donation, you acknowledge and agree that:
+
+- Donations cannot be reversed, refunded, or exchanged once processed.
+- No goods, services, or additional features are provided in exchange for donations.
+
+If you believe a donation was made in error or without your authorization, please contact your payment provider or card issuer to dispute the transaction.
+
+Non-Returnable Items
+
+Donations and any digital content delivered through the App are non-returnable and non-refundable unless otherwise required by applicable law.
+
+Processing Time
+
+If a refund is approved by a payment provider or required by law, processing may take several business days depending on the payment method and your bank or card issuer.
 
 App Downloads
-Since SuccessCall is free to download and use:
 
-There are no charges associated with downloading or using the App
-No refund requests are applicable for the App itself
-Any issues with the download process should be directed to the relevant app store (Google Play or Apple App Store) support
-
+There are no charges for downloading or using SuccessCall. If you experience issues downloading the App, contact the relevant app store support (Google Play or Apple App Store).
 
 Contact Us
-If you have any questions about this Return Policy, please contact us at:
-[msaub.dot@gmail.com]
+
+If you have questions about this Refund Policy, please contact us at: musabibnsiraj@gmail.com
