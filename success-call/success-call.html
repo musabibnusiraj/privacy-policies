@@ -107,7 +107,7 @@
 
 <header>
   <h1>Privacy Policy for Success Call</h1>
-  <p class="updated">Last updated: 17 August 2026</p>
+  <p class="updated">Last updated: 5 October 2026</p>
 </header>
 
 <p>Thank you for choosing Success Call (&ldquo;we,&rdquo; &ldquo;us,&rdquo;
@@ -140,6 +140,8 @@ GPS or location services on any platform.</p>
   <li>The <strong>Qibla compass</strong> uses your device's magnetic and motion
   sensors together with the fixed published coordinates of your selected zone.
   It does not read your actual position.</li>
+  <li>The <strong>masjid map</strong> shows a fixed map of Sri Lanka and does not
+  center on, follow or read your device's position.</li>
 </ul>
 
 <h3>Information stored only on your device</h3>
@@ -150,32 +152,53 @@ database:</p>
   <li>Iqamah offsets and prayer-time adjustments</li>
   <li>Notification preferences and chosen adhan sound</li>
   <li>Display preferences (theme, language, clock style, widget options)</li>
-  <li>A cached copy of prayer times and Hijri calendar data, so the app works
-  offline</li>
+  <li>A cached copy of prayer times, Hijri calendar data and the masjid map
+  listing, so the app works offline</li>
 </ul>
 <p>This data stays on your device. Uninstalling the app deletes it.</p>
+
+<h3>Home screen widget (Android and iOS)</h3>
+<p>The optional &ldquo;Next Prayer&rdquo; home screen widget reads the prayer
+times already cached on your device to display the next prayer. It does not
+make its own network requests and does not send any data anywhere.</p>
 
 <hr>
 
 <h2>Information That Leaves Your Device</h2>
-<p>Success Call is <strong>not</strong> a fully offline app. Three things
-involve a network.</p>
+<p>Success Call is <strong>not</strong> a fully offline app. The following
+things involve a network.</p>
 
-<h3>1. Prayer-time and calendar data</h3>
-<p>The app downloads prayer times and Hijri calendar data from our static
-hosting on GitHub Pages (<code>successcall.github.io</code>).</p>
+<h3>1. Prayer-time, calendar and masjid map data</h3>
+<p>The app downloads prayer times, Hijri calendar data and the masjid
+location listing from our static hosting on GitHub Pages
+(<code>successcall.github.io</code>).</p>
 <p>These are plain file downloads &mdash; the app sends no personal data. As with
 any website, the hosting provider (GitHub) automatically processes your
 <strong>IP address</strong> in its standard server logs to deliver the file. We
 do not receive, store or have access to those logs.</p>
 
-<h3>2. Connectivity check</h3>
+<h3>2. Masjid map tiles and location data</h3>
+<p>The <strong>masjid map</strong> screen shows mosque locations across Sri
+Lanka. Pin locations are sourced from
+<a href="https://www.openstreetmap.org/copyright" rel="noopener">OpenStreetMap
+contributors</a> and the
+<a href="https://docs.overturemaps.org/attribution" rel="noopener">Overture Maps
+Foundation</a>, bundled into the static listing described above &mdash; the app
+does not query these projects live or send your location to them. We do not
+use Google Maps or any Google location data for this feature.</p>
+<p>The map's background tiles (the map imagery itself) are loaded directly from
+OpenStreetMap's tile servers (<code>tile.openstreetmap.org</code>) as you pan
+and zoom. Like any web request, this exposes your <strong>IP address</strong>
+to OpenStreetMap's infrastructure to deliver the map image; no other data
+about you is sent.</p>
+
+<h3>3. Connectivity check</h3>
 <p>Before deciding how to deliver a prayer notification, the app makes a
 lightweight request to <code>one.one.one.one</code> (a public Cloudflare
 endpoint) purely to test whether an internet connection exists. No data about
 you is sent; Cloudflare processes your IP address as it would for any request.</p>
 
-<h3>3. Prayer notifications (Firebase Cloud Messaging)</h3>
+<h3>4. Prayer notifications (Firebase Cloud Messaging)</h3>
 <p><em>Android and iOS only.</em></p>
 <p>To deliver prayer-time notifications reliably, the app uses Google Firebase
 Cloud Messaging. This involves:</p>
@@ -268,12 +291,20 @@ accounts, messaging features or user-generated content.</p>
   notification token.</li>
 </ul>
 
+<h2>Sharing</h2>
+<p>The app can let you share a screenshot-style image of the home screen
+(for example, to send prayer times to someone) using your device's normal
+share sheet. This only happens when you tap the share button, the image is
+generated on your device, and we do not receive a copy of it.</p>
+
 <h2>Your Choices</h2>
 <ul>
   <li><strong>Turn off notifications</strong> in the app or in your system
   settings at any time. This also stops zone topic subscriptions.</li>
-  <li><strong>Use the app offline.</strong> Once prayer times are cached, the app
-  continues to work and to show alerts without a network connection.</li>
+  <li><strong>Use the app offline.</strong> Once prayer times, the Hijri
+  calendar and the masjid map listing are cached, the app continues to work
+  and to show alerts without a network connection (though map tile images
+  need a connection to load).</li>
   <li><strong>Delete everything</strong> by uninstalling the app, or by using
   <em>Reset App</em> in Settings.</li>
 </ul>
@@ -291,6 +322,8 @@ or store payment card details.</p>
     <tr><td>Google Firebase Cloud Messaging</td><td>Prayer notifications</td><td>Android, iOS</td><td><a href="https://policies.google.com/privacy" rel="noopener">Google</a></td></tr>
     <tr><td>GitHub Pages</td><td>Hosting prayer-time data files</td><td>All</td><td><a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" rel="noopener">GitHub</a></td></tr>
     <tr><td>Cloudflare (<code>one.one.one.one</code>)</td><td>Connectivity check only</td><td>Android, iOS, Windows</td><td><a href="https://www.cloudflare.com/privacypolicy/" rel="noopener">Cloudflare</a></td></tr>
+    <tr><td>OpenStreetMap</td><td>Masjid map tile imagery, and mosque location data (via Overture/OSM) bundled into our hosted listing</td><td>Android, iOS</td><td><a href="https://wiki.osmfoundation.org/wiki/Privacy_Policy" rel="noopener">OSM Foundation</a></td></tr>
+    <tr><td>Overture Maps Foundation</td><td>Mosque location data bundled into our hosted listing (no live queries)</td><td>Android, iOS</td><td><a href="https://docs.overturemaps.org/attribution" rel="noopener">Overture</a></td></tr>
     <tr><td>Google Play</td><td>App distribution and in-app updates</td><td>Android</td><td><a href="https://policies.google.com/privacy" rel="noopener">Google</a></td></tr>
     <tr><td>Apple App Store</td><td>App distribution</td><td>iOS</td><td><a href="https://www.apple.com/legal/privacy/" rel="noopener">Apple</a></td></tr>
   </tbody>
