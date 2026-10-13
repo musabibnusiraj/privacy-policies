@@ -107,7 +107,7 @@
 
 <header>
   <h1>Privacy Policy for Success Call</h1>
-  <p class="updated">Last updated: 5 October 2026</p>
+  <p class="updated">Last updated: 14 October 2026</p>
 </header>
 
 <p>Thank you for choosing Success Call (&ldquo;we,&rdquo; &ldquo;us,&rdquo;
@@ -134,23 +134,25 @@ number or date of birth, and we have no server that stores anything about you.</
 <p>Success Call <strong>does not</strong> request, access or use your device's
 GPS or location services on any platform.</p>
 <ul>
-  <li>Prayer times come from a <strong>zone you select manually</strong> from
-  predefined areas in Sri Lanka (Colombo, Gampaha, Kalutara, Jaffna,
-  Mullaitivu, Kilinochchi, Vavuniya, Mannar and Puttalam districts).</li>
+  <li>Prayer times come from a <strong>district or zone you select manually</strong>,
+  covering all 25 administrative districts across the 13 official prayer zones
+  in Sri Lanka.</li>
   <li>The <strong>Qibla compass</strong> uses your device's magnetic and motion
-  sensors together with the fixed published coordinates of your selected zone.
-  It does not read your actual position.</li>
-  <li>The <strong>masjid map</strong> shows a fixed map of Sri Lanka and does not
-  center on, follow or read your device's position.</li>
+  sensors together with the fixed centre coordinates of your selected zone or
+  district. It does not read your actual GPS position.</li>
+  <li>The <strong>masjid map</strong> displays mosque locations across Sri Lanka
+  and lets you browse them island-wide or scoped to your selected district or
+  zone. It does not center on, follow or read your device's position.</li>
 </ul>
 
 <h3>Information stored only on your device</h3>
-<p>Your settings are saved in your device's local app storage and a local
-database:</p>
+<p>Your settings, cached content and mosque records are saved in your device's
+local app storage and SQLite database:</p>
 <ul>
-  <li>Selected prayer zone and data source</li>
-  <li>Iqamah offsets and prayer-time adjustments</li>
-  <li>Notification preferences and chosen adhan sound</li>
+  <li>Selected prayer district, zone and calculation source</li>
+  <li>Iqamah offsets and prayer-time manual adjustments</li>
+  <li>Notification preferences and selected adhan alert sounds</li>
+  <li>Downloaded adhan and notification sound files (cached locally from our sound catalogue)</li>
   <li>Display preferences (theme, language, clock style, widget options)</li>
   <li>A cached copy of prayer times, Hijri calendar data and the masjid map
   listing, so the app works offline</li>
@@ -168,16 +170,16 @@ make its own network requests and does not send any data anywhere.</p>
 <p>Success Call is <strong>not</strong> a fully offline app. The following
 things involve a network.</p>
 
-<h3>1. Prayer-time, calendar and masjid map data</h3>
-<p>The app downloads prayer times, Hijri calendar data and the masjid
-location listing from our static hosting on GitHub Pages
-(<code>successcall.github.io</code>).</p>
+<h3>1. Prayer-time, calendar, masjid directory and audio data</h3>
+<p>The app downloads prayer times, Hijri calendar data, the masjid
+location listing, and optional downloadable adhan audio files from our static
+hosting on GitHub Pages (<code>successcall.github.io</code>).</p>
 <p>These are plain file downloads &mdash; the app sends no personal data. As with
 any website, the hosting provider (GitHub) automatically processes your
 <strong>IP address</strong> in its standard server logs to deliver the file. We
 do not receive, store or have access to those logs.</p>
 
-<h3>2. Masjid map tiles and location data</h3>
+<h3>2. Masjid map tiles, navigation and reporting</h3>
 <p>The <strong>masjid map</strong> screen shows mosque locations across Sri
 Lanka. Pin locations are sourced from
 <a href="https://www.openstreetmap.org/copyright" rel="noopener">OpenStreetMap
@@ -185,12 +187,19 @@ contributors</a> and the
 <a href="https://docs.overturemaps.org/attribution" rel="noopener">Overture Maps
 Foundation</a>, bundled into the static listing described above &mdash; the app
 does not query these projects live or send your location to them. We do not
-use Google Maps or any Google location data for this feature.</p>
+use Google Maps or any Google location data to display the map.</p>
 <p>The map's background tiles (the map imagery itself) are loaded directly from
 OpenStreetMap's tile servers (<code>tile.openstreetmap.org</code>) as you pan
 and zoom. Like any web request, this exposes your <strong>IP address</strong>
 to OpenStreetMap's infrastructure to deliver the map image; no other data
 about you is sent.</p>
+<p><strong>External navigation and issue reporting:</strong> When viewing a
+masjid's details, you may choose to tap for driving directions. This hands off
+the destination coordinates to your device's external map application (such as
+Apple Maps on iOS, or your preferred navigation app on Android via a standard
+map intent). If you tap to report a correction or a missing masjid, the app opens
+WhatsApp with a pre-filled message containing the mosque's public details; no
+message is sent unless you review and send it yourself.</p>
 
 <h3>3. Connectivity check</h3>
 <p>Before deciding how to deliver a prayer notification, the app makes a
@@ -234,10 +243,12 @@ options.</p>
     <tr><td>Internet / Network state</td><td>Download prayer data, receive notifications</td></tr>
     <tr><td>Exact alarms</td><td>Fire the adhan at the precise prayer minute</td></tr>
     <tr><td>Run at startup</td><td>Restore scheduled prayer alerts after a reboot</td></tr>
+    <tr><td>Foreground service (Special use)</td><td>Maintain reliable alarm triggers and silent mode scheduling without background interruption</td></tr>
     <tr><td>Ignore battery optimisation <em>(optional)</em></td><td>Stop the system delaying prayer alerts</td></tr>
     <tr><td>Do Not Disturb access <em>(optional)</em></td><td>The Silent Mode feature, which mutes your phone during prayer</td></tr>
     <tr><td>Modify audio settings <em>(optional)</em></td><td>Silent Mode</td></tr>
     <tr><td>Wake lock / full-screen intent</td><td>Keep the prayer display awake, show the adhan alert</td></tr>
+    <tr><td>Storage write <em>(Android 9 and older only)</em></td><td>Save downloaded adhan audio to the shared notifications directory so the system can play it</td></tr>
     <tr><td>Vibrate</td><td>Notification vibration</td></tr>
   </tbody>
 </table>
@@ -265,16 +276,19 @@ version.</p>
 not send notifications and does not use cookies or trackers.</p>
 
 <h3>Windows</h3>
-<p>The Windows version stores preferences locally and shows notifications
-through the Windows notification system. It does not use Firebase.</p>
+<p>The Windows version stores preferences and cached prayer data in a local
+SQLite database and shows notifications through the Windows notification
+system. It can minimize to the system tray so prayer reminders continue
+running when the main window is closed. It does not use Firebase.</p>
 
 <hr>
 
 <h2>Sensors</h2>
 <p>The Qibla compass reads your device's <strong>magnetometer and
-accelerometer</strong> to work out which way the device is pointing. Sensor
-readings are used momentarily on your device to draw the compass and are never
-recorded or transmitted.</p>
+accelerometer</strong> (fused orientation sensors) to compute your device's heading
+relative to True North using the magnetic declination of your selected zone or district.
+Sensor readings are processed momentarily and strictly in-memory on your device to draw
+the compass; they are never recorded, logged or transmitted.</p>
 
 <h2>Children's Privacy</h2>
 <p>Success Call is suitable for all ages. We do not knowingly collect any
@@ -320,10 +334,10 @@ or store payment card details.</p>
   <thead><tr><th>Service</th><th>Purpose</th><th>Platforms</th><th>Policy</th></tr></thead>
   <tbody>
     <tr><td>Google Firebase Cloud Messaging</td><td>Prayer notifications</td><td>Android, iOS</td><td><a href="https://policies.google.com/privacy" rel="noopener">Google</a></td></tr>
-    <tr><td>GitHub Pages</td><td>Hosting prayer-time data files</td><td>All</td><td><a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" rel="noopener">GitHub</a></td></tr>
+    <tr><td>GitHub Pages</td><td>Hosting prayer-time data files, Hijri calendar, masjid directory and audio files</td><td>All</td><td><a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" rel="noopener">GitHub</a></td></tr>
     <tr><td>Cloudflare (<code>one.one.one.one</code>)</td><td>Connectivity check only</td><td>Android, iOS, Windows</td><td><a href="https://www.cloudflare.com/privacypolicy/" rel="noopener">Cloudflare</a></td></tr>
-    <tr><td>OpenStreetMap</td><td>Masjid map tile imagery, and mosque location data (via Overture/OSM) bundled into our hosted listing</td><td>Android, iOS</td><td><a href="https://wiki.osmfoundation.org/wiki/Privacy_Policy" rel="noopener">OSM Foundation</a></td></tr>
-    <tr><td>Overture Maps Foundation</td><td>Mosque location data bundled into our hosted listing (no live queries)</td><td>Android, iOS</td><td><a href="https://docs.overturemaps.org/attribution" rel="noopener">Overture</a></td></tr>
+    <tr><td>OpenStreetMap</td><td>Masjid map tile imagery, and mosque location data (via Overture/OSM) bundled into our hosted listing</td><td>All</td><td><a href="https://wiki.osmfoundation.org/wiki/Privacy_Policy" rel="noopener">OSM Foundation</a></td></tr>
+    <tr><td>Overture Maps Foundation</td><td>Mosque location data bundled into our hosted listing (no live queries)</td><td>All</td><td><a href="https://docs.overturemaps.org/attribution" rel="noopener">Overture</a></td></tr>
     <tr><td>Google Play</td><td>App distribution and in-app updates</td><td>Android</td><td><a href="https://policies.google.com/privacy" rel="noopener">Google</a></td></tr>
     <tr><td>Apple App Store</td><td>App distribution</td><td>iOS</td><td><a href="https://www.apple.com/legal/privacy/" rel="noopener">Apple</a></td></tr>
   </tbody>
