@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy &ndash; Mini Billy POS</title>
+  <meta name="description" content="Privacy Policy for Mini Billy - Offline Point of Sale (POS) and inventory management app by AIMZCODE for Android and iOS." />
+  <style>
+    :root {
+      --primary: #2563eb;
+      --primary-dark: #1d4ed8;
+      --primary-light: #eff6ff;
+      --text-main: #1e293b;
+      --text-muted: #64748b;
+      --border: #e2e8f0;
+      --card-bg: #f8fafc;
+      --success: #16a34a;
+      --success-bg: #f0fdf4;
+      --badge-bg: #e0e7ff;
+      --badge-text: #3730a3;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      color: var(--text-main);
+      background-color: #f1f5f9;
+      line-height: 1.7;
+      padding: 32px 16px;
+    }
+
+    .container {
+      max-width: 860px;
+      margin: 0 auto;
+      background: #ffffff;
+      border-radius: 14px;
+      box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.06), 0 2px 6px -1px rgba(0, 0, 0, 0.04);
+      padding: 48px 56px;
+    }
+
+    @media (max-width: 768px) {
+      body {
+        padding: 16px 8px;
+      }
+      .container {
+        padding: 28px 22px;
+      }
+    }
+
+    .brand-header {
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 24px;
+      margin-bottom: 32px;
+    }
+
+    .brand-badge {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      background: var(--badge-bg);
+      color: var(--badge-text);
+      border-radius: 9999px;
+      margin-bottom: 12px;
+    }
+
+    h1 {
+      font-size: 2.1rem;
+      font-weight: 800;
+      color: #0f172a;
+      letter-spacing: -0.025em;
+      margin-bottom: 8px;
+    }
+
+    .app-subtitle {
+      font-size: 1.1rem;
+      color: var(--text-muted);
+      margin-bottom: 14px;
+    }
+
+    .meta-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+      font-size: 0.875rem;
+      color: var(--text-muted);
+    }
+
+    .meta-bar span strong {
+      color: var(--text-main);
+    }
+
+    /* Highlight Banner */
+    .highlight-card {
+      background: var(--success-bg);
+      border: 1px solid #bbf7d0;
+      border-radius: 10px;
+      padding: 18px 22px;
+      margin: 28px 0;
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+    }
+
+    .highlight-card .icon {
+      font-size: 1.6rem;
+      line-height: 1;
+      color: var(--success);
+    }
+
+    .highlight-card h4 {
+      font-size: 1rem;
+      font-weight: 700;
+      color: #14532d;
+      margin-bottom: 4px;
+    }
+
+    .highlight-card p {
+      font-size: 0.92rem;
+      color: #166534;
+      margin: 0;
+    }
+
+    /* Table of contents */
+    .toc {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 20px 24px;
+      margin-bottom: 36px;
+    }
+
+    .toc h3 {
+      font-size: 0.95rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: var(--text-muted);
+      margin-bottom: 12px;
+    }
+
+    .toc ol {
+      padding-left: 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 6px 20px;
+    }
+
+    .toc li a {
+      color: var(--primary);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
+
+    .toc li a:hover {
+      text-decoration: underline;
+    }
+
+    /* Content Typography */
+    h2 {
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: #0f172a;
+      margin: 36px 0 14px;
+      padding-top: 10px;
+      border-top: 1px solid #f1f5f9;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    h3 {
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: #1e293b;
+      margin: 20px 0 8px;
+    }
+
+    p {
+      font-size: 0.95rem;
+      color: #334155;
+      margin-bottom: 14px;
+    }
+
+    ul, ol {
+      padding-left: 22px;
+      margin-bottom: 16px;
+    }
+
+    li {
+      font-size: 0.95rem;
+      color: #334155;
+      margin-bottom: 7px;
+    }
+
+    strong {
+      color: #0f172a;
+    }
+
+    a {
+      color: var(--primary);
+      text-decoration: none;
+      word-break: break-all;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    /* Tables */
+    .table-container {
+      overflow-x: auto;
+      margin: 18px 0 24px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.88rem;
+      text-align: left;
+    }
+
+    th {
+      background: #f8fafc;
+      color: #334155;
+      font-weight: 600;
+      padding: 12px 14px;
+      border-bottom: 1px solid var(--border);
+      white-space: nowrap;
+    }
+
+    td {
+      padding: 12px 14px;
+      border-bottom: 1px solid var(--border);
+      color: #475569;
+      vertical-align: top;
+    }
+
+    tr:last-child td {
+      border-bottom: none;
+    }
+
+    tr:hover td {
+      background-color: #fafbfc;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 2px 8px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      border-radius: 4px;
+    }
+
+    .badge-local {
+      background-color: #e0f2fe;
+      color: #0369a1;
+    }
+
+    .badge-none {
+      background-color: #dcfce7;
+      color: #15803d;
+    }
+
+    .badge-user {
+      background-color: #fef3c7;
+      color: #b45309;
+    }
+
+    /* Callout */
+    .info-callout {
+      background: var(--primary-light);
+      border-left: 4px solid var(--primary);
+      padding: 14px 18px;
+      border-radius: 0 8px 8px 0;
+      margin: 18px 0;
+    }
+
+    .info-callout p {
+      margin: 0;
+      font-size: 0.9rem;
+      color: #1e40af;
+    }
+
+    footer {
+      margin-top: 48px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border);
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 12px;
+    }
+
+    @media print {
+      body {
+        background: #fff;
+        padding: 0;
+      }
+      .container {
+        box-shadow: none;
+        padding: 0;
+      }
+      .toc {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  
+  <header class="brand-header">
+    <div class="brand-badge">Official Store Compliance Policy</div>
+    <h1>Privacy Policy</h1>
+    <p class="app-subtitle"><strong>Mini Billy &ndash; Offline Point of Sale (POS) &amp; Inventory</strong></p>
+    <div class="meta-bar">
+      <span><strong>Developer:</strong> AIMZCODE</span>
+      <span><strong>Package / Bundle ID:</strong> <code>com.aimzcode.minibilly</code></span>
+      <span><strong>Effective Date:</strong> October 30, 2026</span>
+      <span><strong>Last Updated:</strong> October 30, 2026</span>
+    </div>
+  </header>
+
+  <div class="highlight-card">
+    <div class="icon">&#10004;</div>
+    <div>
+      <h4>100% Privacy-First &amp; Offline Architecture</h4>
+      <p>Mini Billy is built as an offline-first Point of Sale app. All business data &mdash; inventory, sales transactions, customer lists, prices, debt records, and receipts &mdash; is stored <strong>locally on your physical device</strong>. We do <strong>not</strong> operate tracking servers, we do <strong>not</strong> collect personal data, and we do <strong>not</strong> share or sell your business records to any third party.</p>
+    </div>
+  </div>
+
+  <nav class="toc">
+    <h3>Contents</h3>
+    <ol>
+      <li><a href="#section-1">Overview &amp; Purpose</a></li>
+      <li><a href="#section-2">Information We Do Not Collect</a></li>
+      <li><a href="#section-3">Data Processed &amp; Stored Locally</a></li>
+      <li><a href="#section-4">Device Permissions &amp; Hardware Usage</a></li>
+      <li><a href="#section-5">Google Play Data Safety Disclosure</a></li>
+      <li><a href="#section-6">Apple App Store Privacy Details</a></li>
+      <li><a href="#section-7">Third-Party Services &amp; Network Activity</a></li>
+      <li><a href="#section-8">Data Retention, Backups &amp; Complete Deletion</a></li>
+      <li><a href="#section-9">User Rights (GDPR, CCPA &amp; Global Privacy)</a></li>
+      <li><a href="#section-10">Children&rsquo;s Privacy</a></li>
+      <li><a href="#section-11">Changes to This Policy</a></li>
+      <li><a href="#section-12">Developer Contact</a></li>
+    </ol>
+  </nav>
+
+  <section id="section-1">
+    <h2>1. Overview &amp; Purpose</h2>
+    <p>This Privacy Policy applies to the <strong>Mini Billy</strong> mobile application (hereinafter referred to as the &ldquo;App&rdquo;), developed and published by <strong>AIMZCODE</strong> (&ldquo;we&rdquo;, &ldquo;us&rdquo;, or &ldquo;our&rdquo;), available for Android via the Google Play Store and iOS via the Apple App Store.</p>
+    <p>The App is designed to help small shop owners, merchants, retail stores, and service providers process sales, manage product inventory, track customer credit/debts, print receipts via Bluetooth thermal printers, and generate sales reports completely offline without requiring accounts, logins, or remote server storage.</p>
+    <p>We respect your privacy and are committed to transparency in compliance with Google Play Developer Program Policies, Apple App Store Review Guidelines (Guideline 5.1), the European Union General Data Protection Regulation (GDPR), the California Consumer Privacy Act (CCPA), and other applicable global privacy regulations.</p>
+  </section>
+
+  <section id="section-2">
+    <h2>2. Information We Do Not Collect</h2>
+    <p>Unlike cloud-based services, Mini Billy operates locally on your smartphone or tablet. As the app developer, <strong>AIMZCODE does not collect, receive, store, or monitor:</strong></p>
+    <ul>
+      <li><strong>No Account Information:</strong> No account registration, email address, password, or profile setup is needed to use the App.</li>
+      <li><strong>No Analytics or Tracking IDs:</strong> We do not integrate third-party mobile measurement partners (MMPs), advertising trackers, or tracking SDKs (such as Google Firebase Analytics, Facebook SDK, Adjust, AppsFlyer, etc.).</li>
+      <li><strong>No Location Data:</strong> The App does not track, collect, or store your precise (GPS) or approximate geographic location.</li>
+      <li><strong>No Payment Card / Banking Data:</strong> While the App lets you record that a customer paid via card, bank transfer, or QR Pay for bookkeeping purposes, <em>the App does not process card numbers, CVVs, PINs, or financial transactions</em>. Cash and card processing remains entirely external to the App.</li>
+      <li><strong>No Advertising Identifiers:</strong> We do not read or transmit the Google Advertising ID (GAID) or Apple Identifier for Advertisers (IDFA).</li>
+    </ul>
+  </section>
+
+  <section id="section-3">
+    <h2>3. Data Processed &amp; Stored Locally on Your Device</h2>
+    <p>Any data you enter into Mini Billy remains inside the App&rsquo;s sandboxed local storage on your device. This data includes:</p>
+    <ul>
+      <li><strong>Product Catalog:</strong> Item names, categories, variants (size, colour), prices, cost prices, SKUs, barcodes, and units of measurement.</li>
+      <li><strong>Product &amp; Shop Images:</strong> Product photos, shop logo, and merchant payment QR codes selected by you from your device&rsquo;s camera or photo library.</li>
+      <li><strong>Sales &amp; Transaction History:</strong> Order numbers, timestamps, purchased products, quantities, discounts, tax rates, payment methods chosen (e.g., Cash, Card, Credit, QR Pay), and refunds or corrections.</li>
+      <li><strong>Customer Records:</strong> Optional customer names, phone numbers, customer classification tiers (e.g., wholesaler, retailer, consumer), customer balances, and credit/debt transaction logs that you manually input.</li>
+      <li><strong>Daily Cash Closing Reports:</strong> Shift and daily cash counts, expected cash totals, and closing notes.</li>
+      <li><strong>Store Configuration:</strong> Shop name, shop address, contact phone number, receipt header/footer messages, and preferred currency (e.g., Rs, $, &euro;, etc.) and language settings (English, Tamil, Sinhala).</li>
+    </ul>
+    <p>This information is stored in a private local file (<code>mini_pos.json</code>) managed exclusively by your device&rsquo;s operating system.</p>
+  </section>
+
+  <section id="section-4">
+    <h2>4. Device Permissions &amp; Hardware Usage</h2>
+    <p>Mini Billy requests minimal device permissions, strictly required to deliver the core POS functionalities. Below is the transparent breakdown of why each permission is requested:</p>
+
+    <div class="table-container">
+      <table>
+        <thead>
+          <tr>
+            <th>Permission / Capability</th>
+            <th>Platform</th>
+            <th>Exact Purpose &amp; Usage</th>
+            <th>Data Transmission</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Camera</strong><br/><code>CAMERA</code> / <code>NSCameraUsageDescription</code></td>
+            <td>Android &amp; iOS</td>
+            <td>Used exclusively when you tap the camera scan button to scan product barcodes/QR codes, or take a picture of a product directly from the product edit screen.</td>
+            <td><span class="badge badge-none">None &ndash; 100% Local</span><br/>Frames are processed in real-time on-device; no images or video streams are ever transmitted over the network.</td>
+          </tr>
+          <tr>
+            <td><strong>Photo Library / Media</strong><br/><code>NSPhotoLibraryUsageDescription</code> / Photo Picker</td>
+            <td>Android &amp; iOS</td>
+            <td>Used solely when you choose to attach an existing picture to a product, upload your business logo for printed receipts, or attach your merchant payment QR code.</td>
+            <td><span class="badge badge-none">None &ndash; 100% Local</span><br/>The App only accesses files you explicitly choose. Other personal photos remain untouched.</td>
+          </tr>
+          <tr>
+            <td><strong>Bluetooth</strong><br/><code>BLUETOOTH</code>, <code>BLUETOOTH_CONNECT</code>, <code>BLUETOOTH_SCAN</code> / <code>NSBluetoothAlwaysUsageDescription</code></td>
+            <td>Android &amp; iOS</td>
+            <td>Used solely to discover and pair with your ESC/POS thermal receipt printers (58mm / 80mm) to print receipts and barcode labels.</td>
+            <td><span class="badge badge-none">None &ndash; Local Peripheral</span><br/>Communication is strictly between your phone and your thermal printer. No data leaves the local Bluetooth connection.</td>
+          </tr>
+          <tr>
+            <td><strong>File Storage &amp; Sharing</strong><br/><code>path_provider</code>, <code>file_picker</code>, <code>share_plus</code></td>
+            <td>Android &amp; iOS</td>
+            <td>Used when you initiate: (1) creating or restoring a full JSON backup file, (2) importing/exporting product catalogs via CSV, (3) sharing PDF or image receipts and sales reports to your printer, WhatsApp, or email.</td>
+            <td><span class="badge badge-user">User-Initiated Only</span><br/>Exported files are only transferred if and when you choose to share them using your device&rsquo;s native OS Share Sheet.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="info-callout">
+      <p><strong>Note on Optional Permissions:</strong> You can revoke Camera, Photo, or Bluetooth permissions at any time through your device&rsquo;s Settings. If revoked, features that do not depend on those permissions (such as manual cashier entry, cash register sales, and viewing sales history) will continue to work normally.</p>
+    </div>
+  </section>
+
+  <section id="section-5">
+    <h2>5. Google Play Data Safety Disclosure</h2>
+    <p>To assist users and comply with the Google Play Developer Console <strong>Data Safety</strong> requirements, here is the exact classification of data handling in Mini Billy:</p>
+
+    <div class="table-container">
+      <table>
+        <thead>
+          <tr>
+            <th>Data Category</th>
+            <th>Collected by Developer?</th>
+            <th>Shared with Third Parties?</th>
+            <th>Handled Locally on Device?</th>
+            <th>Google Play Declaration</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Personal Info</strong> (Name, Email, Phone, Address)</td>
+            <td>No</td>
+            <td>No</td>
+            <td>Yes (Only if entered by merchant in customer directory or shop profile)</td>
+            <td><span class="badge badge-none">No Data Collected</span></td>
+          </tr>
+          <tr>
+            <td><strong>Financial Info</strong> (Sales, Receipts, Debt Ledger)</td>
+            <td>No</td>
+            <td>No</td>
+            <td>Yes (Stored strictly in local app sandbox)</td>
+            <td><span class="badge badge-none">No Data Collected</span></td>
+          </tr>
+          <tr>
+            <td><strong>Photos &amp; Videos</strong> (Product &amp; Logo Images)</td>
+            <td>No</td>
+            <td>No</td>
+            <td>Yes (Stored strictly in local app sandbox)</td>
+            <td><span class="badge badge-none">No Data Collected</span></td>
+          </tr>
+          <tr>
+            <td><strong>Location</strong></td>
+            <td>No</td>
+            <td>No</td>
+            <td>No</td>
+            <td><span class="badge badge-none">No Data Collected</span></td>
+          </tr>
+          <tr>
+            <td><strong>Device or Other IDs</strong> (IMEI, GAID, IP)</td>
+            <td>No</td>
+            <td>No</td>
+            <td>No</td>
+            <td><span class="badge badge-none">No Data Collected</span></td>
+          </tr>
+          <tr>
+            <td><strong>App Activity &amp; Analytics</strong></td>
+            <td>No</td>
+            <td>No</td>
+            <td>No</td>
+            <td><span class="badge badge-none">No Data Collected</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p><strong>Summary for Google Play:</strong> The App does not collect user data. All data created in the App stays on the user&rsquo;s device and is not sent to any developer or third-party server.</p>
+  </section>
+
+  <section id="section-6">
+    <h2>6. Apple App Store Privacy Details (App Privacy Labels)</h2>
+    <p>Under Apple&rsquo;s App Store Connect Privacy Information (&ldquo;Privacy Nutrition Labels&rdquo;), Mini Billy qualifies under the following declaration:</p>
+    <ul>
+      <li><strong>Data Used to Track You:</strong> <span class="badge badge-none">None</span> &ndash; The App does not track you across apps and websites owned by other companies.</li>
+      <li><strong>Data Linked to You:</strong> <span class="badge badge-none">None</span> &ndash; No personal data is linked to your identity.</li>
+      <li><strong>Data Not Collected:</strong> <span class="badge badge-none">Data Not Collected</span> &ndash; The developer does not collect any data from this app.</li>
+    </ul>
+  </section>
+
+  <section id="section-7">
+    <h2>7. Third-Party Services &amp; Network Activity</h2>
+    <p>Mini Billy is designed to function 100% offline without requiring an active internet connection. The only optional network interactions occur upon direct user action:</p>
+    <ul>
+      <li><strong>Optional Google Sheets Catalog Import:</strong> If you choose to import product inventory from a public or shared Google Sheets document, the App sends a single direct HTTP request to download that public spreadsheet data into your local device catalog. No merchant credentials or sales records are transmitted during this operation.</li>
+      <li><strong>Native OS Share Sheet:</strong> If you choose to export reports (CSV/PDF) or backup files using WhatsApp, Gmail, Google Drive, or AirDrop, the transmission is handled directly by your device&rsquo;s operating system and chosen third-party application under their respective privacy policies.</li>
+    </ul>
+  </section>
+
+  <section id="section-8">
+    <h2>8. Data Retention, Backups &amp; Complete Deletion</h2>
+    <h3>Data Ownership &amp; Retention</h3>
+    <p>Because all data is stored on your device, you maintain full and absolute ownership of your business data. Data is retained on your device for as long as you keep the App installed.</p>
+
+    <h3>Local Backups</h3>
+    <p>Mini Billy includes built-in safeguards to protect your business records against accidental loss:</p>
+    <ul>
+      <li><strong>Automatic Daily Rolling Backups:</strong> The App maintains local snapshots of your data on the device, keeping the last 7 daily backups automatically.</li>
+      <li><strong>Manual Backup &amp; Restore:</strong> You can create complete backup archives (including products, history, and photos) at any time and store them safely on your local storage, external SD card, or personal cloud storage.</li>
+    </ul>
+
+    <h3>Data Deletion</h3>
+    <p>In compliance with Google Play&rsquo;s Data Deletion Policy and Apple&rsquo;s User Privacy Guidelines:</p>
+    <ul>
+      <li>Because we do not maintain accounts or store your data on external servers, you do not need to submit an account deletion request to us.</li>
+      <li>To completely and permanently delete all data stored in Mini Billy, simply <strong>clear the App Storage / Cache</strong> in your device&rsquo;s Settings or <strong>uninstall the App</strong>. All local databases, catalogs, customer lists, and backup files stored within the App&rsquo;s sandboxed directory will be immediately and irreversibly erased.</li>
+    </ul>
+  </section>
+
+  <section id="section-9">
+    <h2>9. User Rights (GDPR, CCPA &amp; Global Privacy)</h2>
+    <p>Depending on your jurisdiction (such as the European Economic Area under GDPR, or California under CCPA/CPRA), you have rights regarding your personal data:</p>
+    <ul>
+      <li><strong>Right to Access &amp; Portability:</strong> You can export your complete product catalog, sales records, and business data at any time via the App&rsquo;s CSV and JSON backup export tools.</li>
+      <li><strong>Right to Rectification:</strong> You can edit, correct, or update any product, customer, or business information directly within the App interface.</li>
+      <li><strong>Right to Erasure (Right to Be Forgotten):</strong> You have direct, autonomous control to delete individual records (e.g., customers, products, sales) or wipe the entire database by clearing app data.</li>
+      <li><strong>Do Not Sell My Personal Information:</strong> We do not sell, rent, or trade personal data or business information under any circumstances.</li>
+    </ul>
+  </section>
+
+  <section id="section-10">
+    <h2>10. Children&rsquo;s Privacy</h2>
+    <p>Mini Billy is a point of sale and inventory management tool intended for commercial business use by adults and business owners. It is not directed at children under the age of 13 (or under 16 in the European Union). We do not knowingly solicit or collect data from children. If you believe that a child has provided personal information within the App on a device, such data can be permanently removed by clearing the App&rsquo;s data on that device.</p>
+  </section>
+
+  <section id="section-11">
+    <h2>11. Changes to This Privacy Policy</h2>
+    <p>We may update this Privacy Policy from time to time to reflect modifications to the App, operating system requirements, or store developer guidelines. When updates are made, the revised policy will be posted on this page with an updated &ldquo;Last Updated&rdquo; date at the top. We encourage you to review this page periodically.</p>
+  </section>
+
+  <section id="section-12">
+    <h2>12. Contact Information</h2>
+    <p>If you have any questions, suggestions, or concerns regarding this Privacy Policy, your data privacy, or the Mini Billy application, please contact us:</p>
+    <ul>
+      <li><strong>Developer / Company:</strong> AIMZCODE</li>
+      <li><strong>Contact Email:</strong> <a href="mailto:musab.dot@gmail.com">musab.dot@gmail.com</a></li>
+      <li><strong>Application:</strong> Mini Billy (Android &amp; iOS)</li>
+      <li><strong>Developer Portfolio / Information:</strong> Available on Google Play Store and Apple App Store</li>
+    </ul>
+  </section>
+
+  <footer>
+    <div>&copy; 2026 AIMZCODE. All rights reserved.</div>
+    <div>Mini Billy POS &bull; Privacy Policy</div>
+  </footer>
+
+</div>
+
+</body>
+</html>
