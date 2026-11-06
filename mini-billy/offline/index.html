@@ -1,0 +1,1455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy &ndash; Mini Billy POS (offline edition)</title>
+  <meta name="description" content="Official Privacy Policy for Mini Billy - Offline Point of Sale (POS) and inventory management app by AIMZCODE for Android and iOS." />
+  <meta name="theme-color" content="#2563eb" />
+  <style>
+    :root {
+      --primary: #2563eb;
+      --primary-hover: #1d4ed8;
+      --primary-light: #eff6ff;
+      --primary-border: #bfdbfe;
+      --primary-text: #1e40af;
+      
+      --text-heading: #0f172a;
+      --text-main: #1e293b;
+      --text-body: #334155;
+      --text-muted: #64748b;
+      --text-subtle: #94a3b8;
+      
+      --bg-page: #f8fafc;
+      --bg-surface: #ffffff;
+      --bg-card: #f8fafc;
+      --border: #e2e8f0;
+      --border-subtle: #f1f5f9;
+      
+      --success: #16a34a;
+      --success-bg: #f0fdf4;
+      --success-border: #bbf7d0;
+      --success-text: #14532d;
+      
+      --warning: #d97706;
+      --warning-bg: #fffbeb;
+      --warning-border: #fde68a;
+      --warning-text: #92400e;
+      
+      --badge-bg: #e0e7ff;
+      --badge-text: #3730a3;
+      
+      --radius-sm: 6px;
+      --radius-md: 10px;
+      --radius-lg: 16px;
+      --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+      --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.07), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+      --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.06), 0 4px 6px -4px rgba(0, 0, 0, 0.04);
+      --shadow-card: 0 20px 25px -5px rgba(0, 0, 0, 0.04), 0 8px 10px -6px rgba(0, 0, 0, 0.02);
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 86px;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      color: var(--text-body);
+      background-color: var(--bg-page);
+      line-height: 1.7;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    /* Top Sticky Navigation Bar */
+    .site-nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      width: 100%;
+    }
+
+    .site-nav-container {
+      max-width: 1440px;
+      margin: 0 auto;
+      padding: 12px 28px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .brand-link {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: var(--text-heading);
+    }
+
+    .brand-logo-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 9px;
+      background: linear-gradient(135deg, #2563eb, #1d4ed8);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #ffffff;
+      box-shadow: 0 2px 8px rgba(37, 99, 235, 0.35);
+      flex-shrink: 0;
+    }
+
+    .brand-text-block {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.2;
+    }
+
+    .brand-title {
+      font-size: 1.05rem;
+      font-weight: 700;
+      letter-spacing: -0.015em;
+      color: var(--text-heading);
+    }
+
+    .brand-subtitle {
+      font-size: 0.76rem;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      padding: 7px 14px;
+      border-radius: var(--radius-sm);
+      text-decoration: none;
+      cursor: pointer;
+      transition: all 0.15s ease-in-out;
+      border: 1px solid transparent;
+      white-space: nowrap;
+    }
+
+    .btn-secondary {
+      background: #ffffff;
+      color: var(--text-main);
+      border-color: var(--border);
+    }
+
+    .btn-secondary:hover {
+      background: var(--bg-card);
+      border-color: #cbd5e1;
+      color: var(--primary);
+    }
+
+    .btn-primary {
+      background: var(--primary);
+      color: #ffffff;
+    }
+
+    .btn-primary:hover {
+      background: var(--primary-hover);
+    }
+
+    .mobile-toc-toggle {
+      display: none;
+      background: #ffffff;
+      border: 1px solid var(--border);
+      padding: 7px 12px;
+      border-radius: var(--radius-sm);
+      color: var(--text-main);
+      font-size: 0.85rem;
+      font-weight: 600;
+      cursor: pointer;
+      align-items: center;
+      gap: 6px;
+    }
+
+    /* Main Grid Layout for Wide UX */
+    .page-wrapper {
+      flex: 1;
+      max-width: 1440px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 32px 28px 60px;
+    }
+
+    .layout-grid {
+      display: grid;
+      grid-template-columns: 320px minmax(0, 1fr);
+      gap: 36px;
+      align-items: start;
+    }
+
+    /* Sticky Left Sidebar Navigation */
+    .sidebar-wrapper {
+      position: sticky;
+      top: 80px;
+      max-height: calc(100vh - 100px);
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    .sidebar-panel {
+      background: var(--bg-surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-sm);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .sidebar-header {
+      padding: 16px 18px 12px;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .sidebar-title {
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--text-muted);
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .sidebar-search {
+      position: relative;
+    }
+
+    .sidebar-search input {
+      width: 100%;
+      padding: 7px 10px 7px 32px;
+      font-size: 0.85rem;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      background: var(--bg-card);
+      color: var(--text-main);
+      outline: none;
+      transition: all 0.15s ease;
+    }
+
+    .sidebar-search input:focus {
+      background: #ffffff;
+      border-color: var(--primary);
+      box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.15);
+    }
+
+    .sidebar-search svg {
+      position: absolute;
+      left: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 14px;
+      height: 14px;
+      color: var(--text-subtle);
+      pointer-events: none;
+    }
+
+    .sidebar-nav-list {
+      list-style: none;
+      padding: 10px 8px;
+      overflow-y: auto;
+      max-height: calc(100vh - 360px);
+    }
+
+    .sidebar-nav-list::-webkit-scrollbar {
+      width: 5px;
+    }
+
+    .sidebar-nav-list::-webkit-scrollbar-thumb {
+      background: #cbd5e1;
+      border-radius: 999px;
+    }
+
+    .sidebar-nav-item {
+      margin-bottom: 2px;
+    }
+
+    .sidebar-nav-link {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 12px;
+      font-size: 0.86rem;
+      font-weight: 500;
+      color: var(--text-body);
+      text-decoration: none;
+      border-radius: var(--radius-sm);
+      transition: all 0.15s ease;
+      line-height: 1.35;
+    }
+
+    .sidebar-nav-link:hover {
+      background: var(--primary-light);
+      color: var(--primary);
+    }
+
+    .sidebar-nav-link.active {
+      background: var(--primary-light);
+      color: var(--primary);
+      font-weight: 600;
+      box-shadow: inset 3px 0 0 0 var(--primary);
+    }
+
+    .section-num {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 22px;
+      height: 22px;
+      border-radius: 4px;
+      background: #f1f5f9;
+      color: var(--text-muted);
+      font-size: 0.72rem;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    .sidebar-nav-link.active .section-num {
+      background: #dbeafe;
+      color: var(--primary);
+    }
+
+    .sidebar-info-card {
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 14px 16px;
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .sidebar-info-card .info-row {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 6px;
+    }
+
+    .sidebar-info-card .info-row:last-child {
+      margin-bottom: 0;
+    }
+
+    .sidebar-info-card strong {
+      color: var(--text-heading);
+    }
+
+    /* Main Policy Card */
+    .policy-content-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-card);
+      padding: 44px 52px;
+    }
+
+    /* Policy Brand Header */
+    .brand-header {
+      border-bottom: 2px solid var(--border-subtle);
+      padding-bottom: 28px;
+      margin-bottom: 32px;
+    }
+
+    .badge-pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+
+    .compliance-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      padding: 5px 12px;
+      background: #ecfdf5;
+      color: #065f46;
+      border: 1px solid #a7f3d0;
+      border-radius: 9999px;
+    }
+
+    .compliance-badge-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #10b981;
+      display: inline-block;
+    }
+
+    .version-badge {
+      display: inline-flex;
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 4px 10px;
+      background: #f1f5f9;
+      color: var(--text-muted);
+      border-radius: 9999px;
+    }
+
+    h1 {
+      font-size: 2.35rem;
+      font-weight: 800;
+      color: var(--text-heading);
+      letter-spacing: -0.03em;
+      line-height: 1.2;
+      margin-bottom: 10px;
+    }
+
+    .app-subtitle {
+      font-size: 1.15rem;
+      color: var(--text-muted);
+      margin-bottom: 20px;
+      line-height: 1.5;
+    }
+
+    .meta-cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 12px;
+      margin-top: 18px;
+    }
+
+    .meta-chip {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      padding: 10px 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .meta-chip-label {
+      font-size: 0.72rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: var(--text-muted);
+    }
+
+    .meta-chip-val {
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--text-heading);
+      word-break: break-word;
+    }
+
+    .meta-chip-val code {
+      background: #e2e8f0;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-size: 0.82rem;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    }
+
+    /* Key Pillars / Highlights Grid */
+    .highlights-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 16px;
+      margin: 28px 0;
+    }
+
+    .highlight-stat-card {
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 16px 18px;
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      box-shadow: var(--shadow-sm);
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+
+    .highlight-stat-card:hover {
+      box-shadow: var(--shadow-md);
+      border-color: #cbd5e1;
+    }
+
+    .highlight-stat-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.15rem;
+      flex-shrink: 0;
+    }
+
+    .icon-green { background: #dcfce7; color: #16a34a; }
+    .icon-blue { background: #dbeafe; color: #2563eb; }
+    .icon-purple { background: #ede9fe; color: #7c3aed; }
+    .icon-amber { background: #fef3c7; color: #d97706; }
+
+    .highlight-stat-title {
+      font-size: 0.92rem;
+      font-weight: 700;
+      color: var(--text-heading);
+      margin-bottom: 3px;
+    }
+
+    .highlight-stat-desc {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      line-height: 1.45;
+    }
+
+    /* Main Highlight Banner */
+    .highlight-card {
+      background: var(--success-bg);
+      border: 1px solid var(--success-border);
+      border-radius: var(--radius-md);
+      padding: 22px 24px;
+      margin: 28px 0 36px;
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+      box-shadow: 0 2px 6px rgba(22, 163, 74, 0.06);
+    }
+
+    .highlight-card .icon-check-wrapper {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: #bbf7d0;
+      color: #15803d;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+      font-weight: 800;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .highlight-card h4 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--success-text);
+      margin-bottom: 6px;
+    }
+
+    .highlight-card p {
+      font-size: 0.93rem;
+      color: #166534;
+      line-height: 1.65;
+      margin: 0;
+    }
+
+    /* Content Typography & Sections */
+    section {
+      margin-bottom: 42px;
+      scroll-margin-top: 86px;
+    }
+
+    h2 {
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--text-heading);
+      margin: 0 0 16px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border-subtle);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      letter-spacing: -0.015em;
+    }
+
+    .section-title-wrap {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .anchor-copy-btn {
+      opacity: 0;
+      color: var(--text-subtle);
+      text-decoration: none;
+      font-size: 1rem;
+      padding: 4px 6px;
+      border-radius: 4px;
+      transition: opacity 0.15s ease, color 0.15s ease;
+      cursor: pointer;
+    }
+
+    h2:hover .anchor-copy-btn {
+      opacity: 1;
+    }
+
+    .anchor-copy-btn:hover {
+      color: var(--primary);
+      background: var(--primary-light);
+    }
+
+    h3 {
+      font-size: 1.08rem;
+      font-weight: 600;
+      color: var(--text-heading);
+      margin: 24px 0 10px;
+    }
+
+    p {
+      font-size: 0.96rem;
+      color: var(--text-body);
+      margin-bottom: 14px;
+      line-height: 1.7;
+    }
+
+    ul, ol {
+      padding-left: 24px;
+      margin-bottom: 18px;
+    }
+
+    li {
+      font-size: 0.95rem;
+      color: var(--text-body);
+      margin-bottom: 8px;
+      line-height: 1.65;
+    }
+
+    strong {
+      color: var(--text-heading);
+      font-weight: 600;
+    }
+
+    code {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      font-size: 0.86em;
+      background: #f1f5f9;
+      color: #0f172a;
+      padding: 2px 6px;
+      border-radius: 4px;
+      border: 1px solid #e2e8f0;
+    }
+
+    a {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.15s ease;
+    }
+
+    a:hover {
+      color: var(--primary-hover);
+      text-decoration: underline;
+    }
+
+    /* Tables */
+    .table-container {
+      overflow-x: auto;
+      margin: 20px 0 24px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      background: #ffffff;
+      box-shadow: var(--shadow-sm);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.89rem;
+      text-align: left;
+    }
+
+    th {
+      background: #f8fafc;
+      color: var(--text-heading);
+      font-weight: 700;
+      padding: 13px 16px;
+      border-bottom: 1px solid var(--border);
+      white-space: nowrap;
+      font-size: 0.83rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    td {
+      padding: 14px 16px;
+      border-bottom: 1px solid var(--border-subtle);
+      color: var(--text-body);
+      vertical-align: top;
+      line-height: 1.55;
+    }
+
+    tr:last-child td {
+      border-bottom: none;
+    }
+
+    tbody tr:hover td {
+      background-color: #f8fafc;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 3px 9px;
+      font-size: 0.74rem;
+      font-weight: 600;
+      border-radius: 4px;
+      white-space: nowrap;
+    }
+
+    .badge-local {
+      background-color: #e0f2fe;
+      color: #0369a1;
+      border: 1px solid #bae6fd;
+    }
+
+    .badge-none {
+      background-color: #dcfce7;
+      color: #15803d;
+      border: 1px solid #bbf7d0;
+    }
+
+    .badge-user {
+      background-color: #fef3c7;
+      color: #b45309;
+      border: 1px solid #fde68a;
+    }
+
+    .badge-tier {
+      background: #e2e8f0;
+      color: #334155;
+      font-weight: 700;
+    }
+
+    /* Callout Boxes */
+    .info-callout {
+      background: var(--primary-light);
+      border-left: 4px solid var(--primary);
+      padding: 16px 20px;
+      border-radius: 0 var(--radius-md) var(--radius-md) 0;
+      margin: 20px 0;
+      border-top: 1px solid var(--primary-border);
+      border-right: 1px solid var(--primary-border);
+      border-bottom: 1px solid var(--primary-border);
+    }
+
+    .info-callout p {
+      margin: 0;
+      font-size: 0.92rem;
+      color: var(--primary-text);
+      line-height: 1.6;
+    }
+
+    /* Footer */
+    footer {
+      margin-top: 48px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border);
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .footer-brand {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: 600;
+      color: var(--text-heading);
+    }
+
+    /* Floating Back to Top */
+    .back-to-top {
+      position: fixed;
+      bottom: 28px;
+      right: 28px;
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: var(--primary);
+      color: #ffffff;
+      border: none;
+      box-shadow: 0 4px 14px rgba(37, 99, 235, 0.4);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.2s ease;
+      z-index: 90;
+    }
+
+    .back-to-top.visible {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .back-to-top:hover {
+      background: var(--primary-hover);
+      transform: translateY(-2px);
+    }
+
+    /* Responsive Adjustments */
+    @media (max-width: 1120px) {
+      .layout-grid {
+        grid-template-columns: 280px minmax(0, 1fr);
+        gap: 24px;
+      }
+      .policy-content-card {
+        padding: 36px 36px;
+      }
+    }
+
+    @media (max-width: 900px) {
+      .layout-grid {
+        grid-template-columns: 1fr;
+      }
+      .sidebar-wrapper {
+        position: static;
+        max-height: none;
+        display: none; /* toggled via mobile menu */
+      }
+      .sidebar-wrapper.mobile-open {
+        display: flex;
+        margin-bottom: 24px;
+      }
+      .mobile-toc-toggle {
+        display: inline-flex;
+      }
+      .policy-content-card {
+        padding: 28px 22px;
+      }
+      .page-wrapper {
+        padding: 16px 14px 40px;
+      }
+      h1 {
+        font-size: 1.85rem;
+      }
+    }
+
+    /* Print Styles */
+    @media print {
+      body {
+        background: #ffffff !important;
+        color: #000000 !important;
+        padding: 0 !important;
+      }
+      .site-nav,
+      .sidebar-wrapper,
+      .back-to-top,
+      .anchor-copy-btn,
+      .mobile-toc-toggle,
+      .highlights-grid {
+        display: none !important;
+      }
+      .page-wrapper {
+        padding: 0 !important;
+        max-width: 100% !important;
+      }
+      .layout-grid {
+        display: block !important;
+      }
+      .policy-content-card {
+        border: none !important;
+        box-shadow: none !important;
+        padding: 0 !important;
+      }
+      h2, h3, .table-container, .highlight-card, .info-callout {
+        break-inside: avoid;
+      }
+      a {
+        text-decoration: none !important;
+        color: #000000 !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Top Modern Sticky Header -->
+<header class="site-nav">
+  <div class="site-nav-container">
+    <a href="#top" class="brand-link" title="Mini Billy POS Privacy Policy">
+      <div class="brand-logo-icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+          <line x1="8" y1="21" x2="16" y2="21"></line>
+          <line x1="12" y1="17" x2="12" y2="21"></line>
+          <path d="M7 8h10"></path>
+          <path d="M7 11h6"></path>
+        </svg>
+      </div>
+      <div class="brand-text-block">
+        <span class="brand-title">Mini Billy</span>
+        <span class="brand-subtitle">Legal &amp; Privacy Portal</span>
+      </div>
+    </a>
+
+    <div class="nav-actions">
+      <button type="button" class="mobile-toc-toggle" id="mobile-toc-btn" aria-label="Toggle Table of Contents">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+        <span>Contents</span>
+      </button>
+
+      <button type="button" class="btn btn-secondary" onclick="window.print()" title="Print or save as PDF">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="6 9 6 2 18 2 18 9"></polyline>
+          <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
+          <rect x="6" y="14" width="12" height="8"></rect>
+        </svg>
+        <span>Print PDF</span>
+      </button>
+
+      <a href="mailto:musabibnsiraj@gmail.com" class="btn btn-primary" title="Contact AIMZCODE">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+          <polyline points="22,6 12,13 2,6"></polyline>
+        </svg>
+        <span>Contact</span>
+      </a>
+    </div>
+  </div>
+</header>
+
+<div class="page-wrapper" id="top">
+  <div class="layout-grid">
+    
+    <!-- Sticky Left Sidebar Navigation -->
+    <aside class="sidebar-wrapper" id="sidebar-drawer">
+      <div class="sidebar-panel">
+        <div class="sidebar-header">
+          <div class="sidebar-title">
+            <span>Table of Contents</span>
+            <span style="font-size: 0.72rem; color: var(--text-subtle);">12 Sections</span>
+          </div>
+          <div class="sidebar-search">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+            <input type="text" id="toc-filter" placeholder="Filter sections..." aria-label="Filter sections" />
+          </div>
+        </div>
+
+        <ul class="sidebar-nav-list" id="toc-list">
+          <li class="sidebar-nav-item">
+            <a href="#section-1" class="sidebar-nav-link" data-section="section-1">
+              <span class="section-num">01</span>
+              <span>Overview &amp; Purpose</span>
+            </a>
+          </li>
+          <li class="sidebar-nav-item">
+            <a href="#section-2" class="sidebar-nav-link" data-section="section-2">
+              <span class="section-num">02</span>
+              <span>Information We Do Not Collect</span>
+            </a>
+          </li>
+          <li class="sidebar-nav-item">
+            <a href="#section-3" class="sidebar-nav-link" data-section="section-3">
+              <span class="section-num">03</span>
+              <span>Data Stored on Your Device</span>
+            </a>
+          </li>
+          <li class="sidebar-nav-item">
+            <a href="#section-4" class="sidebar-nav-link" data-section="section-4">
+              <span class="section-num">04</span>
+              <span>Device Permissions &amp; Hardware</span>
+            </a>
+          </li>
+          <li class="sidebar-nav-item">
+            <a href="#section-5" class="sidebar-nav-link" data-section="section-5">
+              <span class="section-num">05</span>
+              <span>Google Play Data Safety</span>
+            </a>
+          </li>
+          <li class="sidebar-nav-item">
+            <a href="#section-6" class="sidebar-nav-link" data-section="section-6">
+              <span class="section-num">06</span>
+              <span>Apple App Store Privacy Details</span>
+            </a>
+          </li>
+          <li class="sidebar-nav-item">
+            <a href="#section-7" class="sidebar-nav-link" data-section="section-7">
+              <span class="section-num">07</span>
+              <span>Network Activity</span>
+            </a>
+          </li>
+          <li class="sidebar-nav-item">
+            <a href="#section-8" class="sidebar-nav-link" data-section="section-8">
+              <span class="section-num">08</span>
+              <span>Retention, Backups &amp; Deletion</span>
+            </a>
+          </li>
+          <li class="sidebar-nav-item">
+            <a href="#section-9" class="sidebar-nav-link" data-section="section-9">
+              <span class="section-num">09</span>
+              <span>Your Rights</span>
+            </a>
+          </li>
+          <li class="sidebar-nav-item">
+            <a href="#section-10" class="sidebar-nav-link" data-section="section-10">
+              <span class="section-num">10</span>
+              <span>Children&rsquo;s Privacy</span>
+            </a>
+          </li>
+          <li class="sidebar-nav-item">
+            <a href="#section-11" class="sidebar-nav-link" data-section="section-11">
+              <span class="section-num">11</span>
+              <span>Changes to This Policy</span>
+            </a>
+          </li>
+          <li class="sidebar-nav-item">
+            <a href="#section-12" class="sidebar-nav-link" data-section="section-12">
+              <span class="section-num">12</span>
+              <span>Contact</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Quick Document Info Card in Sidebar -->
+      <div class="sidebar-info-card">
+        <div class="info-row">
+          <span>Developer:</span>
+          <strong>AIMZCODE</strong>
+        </div>
+        <div class="info-row">
+          <span>Effective:</span>
+          <strong>Nov 6, 2026</strong>
+        </div>
+        <div class="info-row">
+          <span>Status:</span>
+          <strong style="color: var(--success);">&#10004; Verified</strong>
+        </div>
+        <div class="info-row" style="margin-top: 6px; padding-top: 6px; border-top: 1px dashed var(--border);">
+          <span>Questions?</span>
+          <a href="mailto:musabibnsiraj@gmail.com" style="font-weight: 600;">Email Support</a>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="policy-content-card">
+      
+      <!-- Brand & Document Header -->
+      <header class="brand-header">
+        <div class="badge-pill-row">
+          <div class="compliance-badge">
+            <span class="compliance-badge-dot"></span>
+            Official Store Compliance Policy
+          </div>
+          <span class="version-badge">Offline edition (no sign-in)</span>
+          <span class="version-badge">Android &amp; iOS</span>
+        </div>
+        
+        <h1>Privacy Policy</h1>
+        <p class="app-subtitle"><strong>Mini Billy &ndash; Offline Point of Sale (POS) &amp; Inventory Management</strong></p>
+        
+        <div class="meta-cards-grid">
+          <div class="meta-chip">
+            <span class="meta-chip-label">Developer</span>
+            <span class="meta-chip-val">AIMZCODE</span>
+          </div>
+          <div class="meta-chip">
+            <span class="meta-chip-label">Package / Bundle ID</span>
+            <span class="meta-chip-val"><code>com.aimzcode.minibilly</code></span>
+          </div>
+          <div class="meta-chip">
+            <span class="meta-chip-label">Effective Date</span>
+            <span class="meta-chip-val">November 6, 2026</span>
+          </div>
+          <div class="meta-chip">
+            <span class="meta-chip-label">Last Updated</span>
+            <span class="meta-chip-val">November 6, 2026</span>
+          </div>
+        </div>
+      </header>
+
+      <!-- Key Visual Summary Pillars -->
+      <div class="highlights-grid">
+        <div class="highlight-stat-card">
+          <div class="highlight-stat-icon icon-green">&#128241;</div>
+          <div>
+            <div class="highlight-stat-title">100% Offline by Default</div>
+            <div class="highlight-stat-desc">Inventory, sales, customers and receipts stay on your device. No account needed.</div>
+          </div>
+        </div>
+
+        <div class="highlight-stat-card">
+          <div class="highlight-stat-icon icon-blue">&#128737;</div>
+          <div>
+            <div class="highlight-stat-title">Zero Tracking or Ads</div>
+            <div class="highlight-stat-desc">No advertising SDKs, no Google Analytics, no tracking IDs (GAID/IDFA), no location tracking.</div>
+          </div>
+        </div>
+
+        <div class="highlight-stat-card">
+          <div class="highlight-stat-icon icon-purple">&#128274;</div>
+          <div>
+            <div class="highlight-stat-title">Full Data Ownership</div>
+            <div class="highlight-stat-desc">Export JSON and CSV archives anytime, or delete all records instantly with complete peace of mind.</div>
+          </div>
+        </div>
+
+        <div class="highlight-stat-card">
+          <div class="highlight-stat-icon icon-amber">&#9729;</div>
+          <div>
+            <div class="highlight-stat-title">No Account, No Server</div>
+            <div class="highlight-stat-desc">This version has no sign-in and no cloud features. Your shop data never reaches us.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Main Highlight Banner -->
+      <div class="highlight-card">
+        <div class="icon-check-wrapper">&#10004;</div>
+        <div>
+          <h4>Privacy-First and Fully Offline</h4>
+          <p>Mini Billy works completely offline. Everything you enter &mdash; products, sales, customers, debts, stock records, photos and settings &mdash; is stored <strong>only on your device</strong>. This version has <strong>no sign-in, no accounts and no cloud features</strong>, so AIMZCODE does not receive any of your data. Data leaves your device only when <strong>you</strong> choose to share, export or back it up. We use no advertising or tracking tools, and we never sell anything about you or your shop.</p>
+        </div>
+      </div>
+
+            <!-- SECTION-1 -->
+      <section id="section-1">
+        <h2>
+          <span class="section-title-wrap">1. Overview &amp; Purpose</span>
+          <a href="#section-1" class="anchor-copy-btn" title="Copy link to this section">&#128279;</a>
+        </h2>
+        <p>This Privacy Policy applies to the <strong>Mini Billy</strong> app (the &ldquo;App&rdquo;) for Android and iOS, made by <strong>AIMZCODE</strong> (&ldquo;we&rdquo;, &ldquo;us&rdquo;). It covers the <strong>offline edition</strong> of the App: the version without sign-in, accounts or cloud features.</p>
+        <p>The App helps shop owners sell, scan barcodes, manage stock, keep customer credit and debts, print receipts and labels on Bluetooth printers, close the day and see reports, all without an internet connection.</p>
+        <p>We follow the Google Play Developer Program Policies, the Apple App Store Review Guidelines (5.1), the EU General Data Protection Regulation (GDPR), the California Consumer Privacy Act (CCPA) and Sri Lanka&rsquo;s Personal Data Protection Act.</p>
+      </section>
+
+      <!-- SECTION-2 -->
+      <section id="section-2">
+        <h2>
+          <span class="section-title-wrap">2. Information We Do Not Collect</span>
+          <a href="#section-2" class="anchor-copy-btn" title="Copy link to this section">&#128279;</a>
+        </h2>
+        <p>The App runs on your phone or tablet. <strong>AIMZCODE does not collect, receive or store any of your data.</strong> In particular:</p>
+        <ul>
+          <li><strong>No account:</strong> there is no registration, email, password or profile.</li>
+          <li><strong>No analytics or tracking:</strong> no advertising, analytics or tracking tools, and no advertising IDs (Google Advertising ID or Apple IDFA).</li>
+          <li><strong>No location:</strong> the App does not use your GPS or approximate location.</li>
+          <li><strong>No payment card data:</strong> you can record that a customer paid by cash, card, bank transfer or QR code for your own books, but the App never handles card numbers, PINs or real payments.</li>
+          <li><strong>No crash reports:</strong> the App does not send crash or usage reports to us.</li>
+        </ul>
+      </section>
+
+      <!-- SECTION-3 -->
+      <section id="section-3">
+        <h2>
+          <span class="section-title-wrap">3. Data Stored on Your Device</span>
+          <a href="#section-3" class="anchor-copy-btn" title="Copy link to this section">&#128279;</a>
+        </h2>
+        <p>Everything you enter stays in the App&rsquo;s private storage on your device:</p>
+        <ul>
+          <li><strong>Products:</strong> names, categories, variants, prices, costs, barcodes, units, stock, manufacture and expiry dates.</li>
+          <li><strong>Images:</strong> product photos, your shop logo and payment QR code, chosen by you from the camera or photo library.</li>
+          <li><strong>Sales:</strong> receipts, items, quantities, discounts, tax, payment method, refunds and corrections.</li>
+          <li><strong>Customers:</strong> names, phone numbers, customer types and prices, credit and debt payments, as you enter them.</li>
+          <li><strong>Stock and closing records:</strong> received stock, stock counts, restock lists and daily cash closings.</li>
+          <li><strong>Settings:</strong> shop name, address and phone, receipt texts, currency, tax, language, printer and PIN lock settings. Owner and cashier PINs are stored only as salted hashes, never as the PIN itself.</li>
+        </ul>
+      </section>
+
+      <!-- SECTION-4 -->
+      <section id="section-4">
+        <h2>
+          <span class="section-title-wrap">4. Device Permissions &amp; Hardware</span>
+          <a href="#section-4" class="anchor-copy-btn" title="Copy link to this section">&#128279;</a>
+        </h2>
+        <p>The App asks only for what its features need:</p>
+        <div class="table-container">
+          <table>
+            <thead><tr><th>Permission</th><th>Why</th><th>Data sent anywhere</th></tr></thead>
+            <tbody>
+              <tr><td><strong>Camera</strong></td><td>Scanning barcodes and QR codes, and taking product photos, only when you tap scan or photo.</td><td><span class="badge badge-none">None &ndash; on your device only</span><br/>Camera frames are processed on the device and never sent.</td></tr>
+              <tr><td><strong>Photos / media</strong></td><td>Attaching a picture you pick to a product, or your logo or payment QR code to receipts.</td><td><span class="badge badge-none">None &ndash; on your device only</span><br/>The App sees only the files you pick.</td></tr>
+              <tr><td><strong>Bluetooth</strong></td><td>Finding and connecting to your receipt and label printer, and to an external barcode scanner.</td><td><span class="badge badge-none">None &ndash; on your device only</span><br/>Data goes only between your phone and your printer.</td></tr>
+              <tr><td><strong>Files and sharing</strong></td><td>Making and restoring backups, importing and exporting CSV files, and sharing receipts or reports.</td><td><span class="badge badge-user">Only when you choose</span><br/>Files leave the device only through the share sheet when you send them (for example to WhatsApp, email or your own cloud storage).</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="info-callout"><p>You can turn off any permission in your device settings at any time. Selling, stock and reports keep working without them.</p></div>
+      </section>
+
+      <!-- SECTION-5 -->
+      <section id="section-5">
+        <h2>
+          <span class="section-title-wrap">5. Google Play Data Safety</span>
+          <a href="#section-5" class="anchor-copy-btn" title="Copy link to this section">&#128279;</a>
+        </h2>
+        <p>For the Google Play <strong>Data safety</strong> form, this edition declares:</p>
+        <div class="table-container">
+          <table>
+            <thead><tr><th>Data type</th><th>Collected</th><th>Shared</th><th>Declaration</th></tr></thead>
+            <tbody>
+              <tr><td><strong>Personal info</strong> (name, email, phone, address)</td><td>No</td><td>No</td><td><span class="badge badge-none">No Data Collected</span></td></tr>
+              <tr><td><strong>Financial info</strong> (sales, receipts, debts)</td><td>No</td><td>No</td><td><span class="badge badge-none">No Data Collected</span></td></tr>
+              <tr><td><strong>Photos</strong></td><td>No</td><td>No</td><td><span class="badge badge-none">No Data Collected</span></td></tr>
+              <tr><td><strong>Location</strong></td><td>No</td><td>No</td><td><span class="badge badge-none">No Data Collected</span></td></tr>
+              <tr><td><strong>Device or other IDs</strong></td><td>No</td><td>No</td><td><span class="badge badge-none">No Data Collected</span></td></tr>
+              <tr><td><strong>App activity, diagnostics, crash logs</strong></td><td>No</td><td>No</td><td><span class="badge badge-none">No Data Collected</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p><strong>Summary:</strong> the App does not collect or share user data. Data you enter is processed only on your device.</p>
+      </section>
+
+      <!-- SECTION-6 -->
+      <section id="section-6">
+        <h2>
+          <span class="section-title-wrap">6. Apple App Store Privacy Details</span>
+          <a href="#section-6" class="anchor-copy-btn" title="Copy link to this section">&#128279;</a>
+        </h2>
+        <ul>
+          <li><strong>Data used to track you:</strong> <span class="badge badge-none">None</span></li>
+          <li><strong>Data linked to you:</strong> <span class="badge badge-none">None</span></li>
+          <li><strong>Data not linked to you:</strong> <span class="badge badge-none">None</span> &ndash; Data Not Collected.</li>
+        </ul>
+      </section>
+
+      <!-- SECTION-7 -->
+      <section id="section-7">
+        <h2>
+          <span class="section-title-wrap">7. Network Activity</span>
+          <a href="#section-7" class="anchor-copy-btn" title="Copy link to this section">&#128279;</a>
+        </h2>
+        <p>The App does not contact AIMZCODE servers. It uses the internet only when you ask it to:</p>
+        <ul>
+          <li><strong>Google Sheets import:</strong> if you import products from a Google Sheet link, the App downloads that sheet. Nothing from your shop is sent.</li>
+          <li><strong>Sharing and links:</strong> when you share a receipt, report or backup, or open WhatsApp, email, our website or this policy, your device&rsquo;s share sheet or browser handles it under that app&rsquo;s own privacy policy.</li>
+        </ul>
+        <p>The App includes Google&rsquo;s Firebase core library, which starts with the App. No Firebase service that collects data (such as Analytics, Crashlytics or Cloud Messaging) is used in this edition.</p>
+      </section>
+
+      <!-- SECTION-8 -->
+      <section id="section-8">
+        <h2>
+          <span class="section-title-wrap">8. Retention, Backups &amp; Deletion</span>
+          <a href="#section-8" class="anchor-copy-btn" title="Copy link to this section">&#128279;</a>
+        </h2>
+        <h3>Your data, on your device</h3>
+        <p>Your data belongs to you and stays on your device for as long as the App is installed.</p>
+        <h3>Backups</h3>
+        <ul>
+          <li><strong>Automatic daily backups:</strong> the App keeps the last 7 daily backup files on the device.</li>
+          <li><strong>Manual backup and restore:</strong> make a full backup file at any time and keep it wherever you like.</li>
+        </ul>
+        <h3>Deleting your data</h3>
+        <ul>
+          <li>We hold no account or server data about you, so there is nothing for us to delete.</li>
+          <li>To delete everything, clear the App&rsquo;s storage in your device settings or uninstall the App. Backup files you saved or shared outside the App stay where you put them.</li>
+        </ul>
+      </section>
+
+      <!-- SECTION-9 -->
+      <section id="section-9">
+        <h2>
+          <span class="section-title-wrap">9. Your Rights</span>
+          <a href="#section-9" class="anchor-copy-btn" title="Copy link to this section">&#128279;</a>
+        </h2>
+        <ul>
+          <li><strong>Access and portability:</strong> export your products, sales and customers as CSV, or a full backup file, at any time.</li>
+          <li><strong>Correction:</strong> edit any record in the App.</li>
+          <li><strong>Erasure:</strong> delete records in the App, or clear its data as described in Section 8.</li>
+          <li><strong>No sale of data:</strong> we do not sell, rent or share personal or business data.</li>
+        </ul>
+      </section>
+
+      <!-- SECTION-10 -->
+      <section id="section-10">
+        <h2>
+          <span class="section-title-wrap">10. Children&rsquo;s Privacy</span>
+          <a href="#section-10" class="anchor-copy-btn" title="Copy link to this section">&#128279;</a>
+        </h2>
+        <p>Mini Billy is a business tool for adults. It is not directed at children under 13 (16 in the EU), and we do not knowingly collect data from children.</p>
+      </section>
+
+      <!-- SECTION-11 -->
+      <section id="section-11">
+        <h2>
+          <span class="section-title-wrap">11. Changes to This Policy</span>
+          <a href="#section-11" class="anchor-copy-btn" title="Copy link to this section">&#128279;</a>
+        </h2>
+        <p>If we change this policy, the new version will be posted here with a new date. A later version of the App may add optional sign-in and cloud backup; before that version is released, this policy will be updated to explain exactly what those features collect, and you will be able to keep using the App without them.</p>
+      </section>
+
+      <!-- SECTION-12 -->
+      <section id="section-12">
+        <h2>
+          <span class="section-title-wrap">12. Contact</span>
+          <a href="#section-12" class="anchor-copy-btn" title="Copy link to this section">&#128279;</a>
+        </h2>
+        <p>Questions about this policy or your data:</p>
+        <ul>
+          <li><strong>Developer:</strong> AIMZCODE</li>
+          <li><strong>Email:</strong> <a href="mailto:musabibnsiraj@gmail.com">musabibnsiraj@gmail.com</a></li>
+          <li><strong>Phone / WhatsApp:</strong> +94 70 651 3162</li>
+          <li><strong>Website:</strong> <a href="https://musabibnusiraj.github.io">musabibnusiraj.github.io</a></li>
+        </ul>
+      </section>
+
+      <!-- Card Footer -->
+      <footer>
+        <div class="footer-brand">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--primary);">
+            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+            <line x1="8" y1="21" x2="16" y2="21"></line>
+            <line x1="12" y1="17" x2="12" y2="21"></line>
+          </svg>
+          <span>&copy; 2026 AIMZCODE. All rights reserved.</span>
+        </div>
+        <div>Mini Billy POS &bull; Privacy Policy (offline edition)</div>
+      </footer>
+
+    </main>
+
+  </div>
+</div>
+
+<!-- Back to Top Button -->
+<button class="back-to-top" id="back-to-top" aria-label="Back to Top" title="Back to top">
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+    <polyline points="18 15 12 9 6 15"></polyline>
+  </svg>
+</button>
+
+<script>
+  // Mobile Drawer Toggle
+  const mobileTocBtn = document.getElementById('mobile-toc-btn');
+  const sidebarDrawer = document.getElementById('sidebar-drawer');
+
+  if (mobileTocBtn && sidebarDrawer) {
+    mobileTocBtn.addEventListener('click', () => {
+      sidebarDrawer.classList.toggle('mobile-open');
+    });
+  }
+
+  // Scrollspy & Active Section Highlighting
+  const navLinks = document.querySelectorAll('.sidebar-nav-link');
+  const sections = document.querySelectorAll('section[id]');
+
+  function updateActiveToc() {
+    let currentId = '';
+    const scrollPos = window.scrollY + 120;
+
+    sections.forEach(sec => {
+      const top = sec.offsetTop;
+      const height = sec.offsetHeight;
+      if (scrollPos >= top && scrollPos < top + height) {
+        currentId = sec.getAttribute('id');
+      }
+    });
+
+    if (!currentId && sections.length > 0 && window.scrollY < sections[0].offsetTop) {
+      currentId = sections[0].getAttribute('id');
+    }
+
+    navLinks.forEach(link => {
+      if (link.getAttribute('data-section') === currentId) {
+        link.classList.add('active');
+      } else {
+        link.classList.remove('active');
+      }
+    });
+  }
+
+  window.addEventListener('scroll', updateActiveToc, { passive: true });
+  updateActiveToc();
+
+  // TOC Real-time Filter
+  const filterInput = document.getElementById('toc-filter');
+  const tocList = document.getElementById('toc-list');
+  const tocItems = tocList ? tocList.querySelectorAll('.sidebar-nav-item') : [];
+
+  if (filterInput) {
+    filterInput.addEventListener('input', (e) => {
+      const term = e.target.value.toLowerCase().trim();
+      tocItems.forEach(item => {
+        const text = item.textContent.toLowerCase();
+        if (text.includes(term)) {
+          item.style.display = '';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+    });
+  }
+
+  // Copy Anchor Link functionality
+  const copyButtons = document.querySelectorAll('.anchor-copy-btn');
+  copyButtons.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      const href = btn.getAttribute('href');
+      const url = window.location.origin + window.location.pathname + href;
+      navigator.clipboard.writeText(url).then(() => {
+        const originalText = btn.textContent;
+        btn.textContent = '✓';
+        btn.title = 'Link copied to clipboard!';
+        setTimeout(() => {
+          btn.textContent = originalText;
+          btn.title = 'Copy link to this section';
+        }, 2000);
+      }).catch(() => {});
+    });
+  });
+
+  // Back to Top Button visibility & action
+  const backToTopBtn = document.getElementById('back-to-top');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 300) {
+      backToTopBtn.classList.add('visible');
+    } else {
+      backToTopBtn.classList.remove('visible');
+    }
+  }, { passive: true });
+
+  if (backToTopBtn) {
+    backToTopBtn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
+</script>
+
+</body>
+</html>
