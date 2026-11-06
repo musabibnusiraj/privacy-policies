@@ -3,21 +3,49 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Privacy Policy &ndash; Mini Billy POS</title>
-  <meta name="description" content="Privacy Policy for Mini Billy - Offline Point of Sale (POS) and inventory management app by AIMZCODE for Android and iOS." />
+  <title>Privacy Policy &ndash; Mini Billy POS &amp; Inventory</title>
+  <meta name="description" content="Official Privacy Policy for Mini Billy - Offline Point of Sale (POS) and inventory management app by AIMZCODE for Android and iOS." />
+  <meta name="theme-color" content="#2563eb" />
   <style>
     :root {
       --primary: #2563eb;
-      --primary-dark: #1d4ed8;
+      --primary-hover: #1d4ed8;
       --primary-light: #eff6ff;
+      --primary-border: #bfdbfe;
+      --primary-text: #1e40af;
+      
+      --text-heading: #0f172a;
       --text-main: #1e293b;
+      --text-body: #334155;
       --text-muted: #64748b;
+      --text-subtle: #94a3b8;
+      
+      --bg-page: #f8fafc;
+      --bg-surface: #ffffff;
+      --bg-card: #f8fafc;
       --border: #e2e8f0;
-      --card-bg: #f8fafc;
+      --border-subtle: #f1f5f9;
+      
       --success: #16a34a;
       --success-bg: #f0fdf4;
+      --success-border: #bbf7d0;
+      --success-text: #14532d;
+      
+      --warning: #d97706;
+      --warning-bg: #fffbeb;
+      --warning-border: #fde68a;
+      --warning-text: #92400e;
+      
       --badge-bg: #e0e7ff;
       --badge-text: #3730a3;
+      
+      --radius-sm: 6px;
+      --radius-md: 10px;
+      --radius-lg: 16px;
+      --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+      --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.07), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
+      --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.06), 0 4px 6px -4px rgba(0, 0, 0, 0.04);
+      --shadow-card: 0 20px 25px -5px rgba(0, 0, 0, 0.04), 0 8px 10px -6px rgba(0, 0, 0, 0.02);
     }
 
     *, *::before, *::after {
@@ -26,611 +54,1562 @@
       padding: 0;
     }
 
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 86px;
+    }
+
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-      color: var(--text-main);
-      background-color: #f1f5f9;
+      color: var(--text-body);
+      background-color: var(--bg-page);
       line-height: 1.7;
-      padding: 32px 16px;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
     }
 
-    .container {
-      max-width: 860px;
+    /* Top Sticky Navigation Bar */
+    .site-nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      width: 100%;
+    }
+
+    .site-nav-container {
+      max-width: 1440px;
       margin: 0 auto;
+      padding: 12px 28px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .brand-link {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: var(--text-heading);
+    }
+
+    .brand-logo-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 9px;
+      background: linear-gradient(135deg, #2563eb, #1d4ed8);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #ffffff;
+      box-shadow: 0 2px 8px rgba(37, 99, 235, 0.35);
+      flex-shrink: 0;
+    }
+
+    .brand-text-block {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.2;
+    }
+
+    .brand-title {
+      font-size: 1.05rem;
+      font-weight: 700;
+      letter-spacing: -0.015em;
+      color: var(--text-heading);
+    }
+
+    .brand-subtitle {
+      font-size: 0.76rem;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      padding: 7px 14px;
+      border-radius: var(--radius-sm);
+      text-decoration: none;
+      cursor: pointer;
+      transition: all 0.15s ease-in-out;
+      border: 1px solid transparent;
+      white-space: nowrap;
+    }
+
+    .btn-secondary {
       background: #ffffff;
-      border-radius: 14px;
-      box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.06), 0 2px 6px -1px rgba(0, 0, 0, 0.04);
-      padding: 48px 56px;
+      color: var(--text-main);
+      border-color: var(--border);
     }
 
-    @media (max-width: 768px) {
-      body {
-        padding: 16px 8px;
-      }
-      .container {
-        padding: 28px 22px;
-      }
+    .btn-secondary:hover {
+      background: var(--bg-card);
+      border-color: #cbd5e1;
+      color: var(--primary);
     }
 
+    .btn-primary {
+      background: var(--primary);
+      color: #ffffff;
+    }
+
+    .btn-primary:hover {
+      background: var(--primary-hover);
+    }
+
+    .mobile-toc-toggle {
+      display: none;
+      background: #ffffff;
+      border: 1px solid var(--border);
+      padding: 7px 12px;
+      border-radius: var(--radius-sm);
+      color: var(--text-main);
+      font-size: 0.85rem;
+      font-weight: 600;
+      cursor: pointer;
+      align-items: center;
+      gap: 6px;
+    }
+
+    /* Main Grid Layout for Wide UX */
+    .page-wrapper {
+      flex: 1;
+      max-width: 1440px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 32px 28px 60px;
+    }
+
+    .layout-grid {
+      display: grid;
+      grid-template-columns: 320px minmax(0, 1fr);
+      gap: 36px;
+      align-items: start;
+    }
+
+    /* Sticky Left Sidebar Navigation */
+    .sidebar-wrapper {
+      position: sticky;
+      top: 80px;
+      max-height: calc(100vh - 100px);
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    .sidebar-panel {
+      background: var(--bg-surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-sm);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .sidebar-header {
+      padding: 16px 18px 12px;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .sidebar-title {
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--text-muted);
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .sidebar-search {
+      position: relative;
+    }
+
+    .sidebar-search input {
+      width: 100%;
+      padding: 7px 10px 7px 32px;
+      font-size: 0.85rem;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      background: var(--bg-card);
+      color: var(--text-main);
+      outline: none;
+      transition: all 0.15s ease;
+    }
+
+    .sidebar-search input:focus {
+      background: #ffffff;
+      border-color: var(--primary);
+      box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.15);
+    }
+
+    .sidebar-search svg {
+      position: absolute;
+      left: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 14px;
+      height: 14px;
+      color: var(--text-subtle);
+      pointer-events: none;
+    }
+
+    .sidebar-nav-list {
+      list-style: none;
+      padding: 10px 8px;
+      overflow-y: auto;
+      max-height: calc(100vh - 360px);
+    }
+
+    .sidebar-nav-list::-webkit-scrollbar {
+      width: 5px;
+    }
+
+    .sidebar-nav-list::-webkit-scrollbar-thumb {
+      background: #cbd5e1;
+      border-radius: 999px;
+    }
+
+    .sidebar-nav-item {
+      margin-bottom: 2px;
+    }
+
+    .sidebar-nav-link {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 12px;
+      font-size: 0.86rem;
+      font-weight: 500;
+      color: var(--text-body);
+      text-decoration: none;
+      border-radius: var(--radius-sm);
+      transition: all 0.15s ease;
+      line-height: 1.35;
+    }
+
+    .sidebar-nav-link:hover {
+      background: var(--primary-light);
+      color: var(--primary);
+    }
+
+    .sidebar-nav-link.active {
+      background: var(--primary-light);
+      color: var(--primary);
+      font-weight: 600;
+      box-shadow: inset 3px 0 0 0 var(--primary);
+    }
+
+    .section-num {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 22px;
+      height: 22px;
+      border-radius: 4px;
+      background: #f1f5f9;
+      color: var(--text-muted);
+      font-size: 0.72rem;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    .sidebar-nav-link.active .section-num {
+      background: #dbeafe;
+      color: var(--primary);
+    }
+
+    .sidebar-info-card {
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 14px 16px;
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .sidebar-info-card .info-row {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 6px;
+    }
+
+    .sidebar-info-card .info-row:last-child {
+      margin-bottom: 0;
+    }
+
+    .sidebar-info-card strong {
+      color: var(--text-heading);
+    }
+
+    /* Main Policy Card */
+    .policy-content-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-card);
+      padding: 44px 52px;
+    }
+
+    /* Policy Brand Header */
     .brand-header {
-      border-bottom: 2px solid var(--border);
-      padding-bottom: 24px;
+      border-bottom: 2px solid var(--border-subtle);
+      padding-bottom: 28px;
       margin-bottom: 32px;
     }
 
-    .brand-badge {
-      display: inline-block;
+    .badge-pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 14px;
+    }
+
+    .compliance-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
       font-size: 0.75rem;
       font-weight: 700;
       letter-spacing: 0.05em;
       text-transform: uppercase;
-      padding: 4px 10px;
-      background: var(--badge-bg);
-      color: var(--badge-text);
+      padding: 5px 12px;
+      background: #ecfdf5;
+      color: #065f46;
+      border: 1px solid #a7f3d0;
       border-radius: 9999px;
-      margin-bottom: 12px;
+    }
+
+    .compliance-badge-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #10b981;
+      display: inline-block;
+    }
+
+    .version-badge {
+      display: inline-flex;
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 4px 10px;
+      background: #f1f5f9;
+      color: var(--text-muted);
+      border-radius: 9999px;
     }
 
     h1 {
-      font-size: 2.1rem;
+      font-size: 2.35rem;
       font-weight: 800;
-      color: #0f172a;
-      letter-spacing: -0.025em;
-      margin-bottom: 8px;
+      color: var(--text-heading);
+      letter-spacing: -0.03em;
+      line-height: 1.2;
+      margin-bottom: 10px;
     }
 
     .app-subtitle {
-      font-size: 1.1rem;
+      font-size: 1.15rem;
       color: var(--text-muted);
-      margin-bottom: 14px;
+      margin-bottom: 20px;
+      line-height: 1.5;
     }
 
-    .meta-bar {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 18px;
-      font-size: 0.875rem;
-      color: var(--text-muted);
+    .meta-cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 12px;
+      margin-top: 18px;
     }
 
-    .meta-bar span strong {
-      color: var(--text-main);
-    }
-
-    /* Highlight Banner */
-    .highlight-card {
-      background: var(--success-bg);
-      border: 1px solid #bbf7d0;
-      border-radius: 10px;
-      padding: 18px 22px;
-      margin: 28px 0;
-      display: flex;
-      gap: 16px;
-      align-items: flex-start;
-    }
-
-    .highlight-card .icon {
-      font-size: 1.6rem;
-      line-height: 1;
-      color: var(--success);
-    }
-
-    .highlight-card h4 {
-      font-size: 1rem;
-      font-weight: 700;
-      color: #14532d;
-      margin-bottom: 4px;
-    }
-
-    .highlight-card p {
-      font-size: 0.92rem;
-      color: #166534;
-      margin: 0;
-    }
-
-    /* Table of contents */
-    .toc {
-      background: var(--card-bg);
+    .meta-chip {
+      background: var(--bg-card);
       border: 1px solid var(--border);
-      border-radius: 10px;
-      padding: 20px 24px;
-      margin-bottom: 36px;
+      border-radius: var(--radius-sm);
+      padding: 10px 14px;
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
     }
 
-    .toc h3 {
-      font-size: 0.95rem;
+    .meta-chip-label {
+      font-size: 0.72rem;
+      font-weight: 600;
       text-transform: uppercase;
       letter-spacing: 0.04em;
       color: var(--text-muted);
-      margin-bottom: 12px;
     }
 
-    .toc ol {
-      padding-left: 20px;
+    .meta-chip-val {
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--text-heading);
+      word-break: break-word;
+    }
+
+    .meta-chip-val code {
+      background: #e2e8f0;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-size: 0.82rem;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    }
+
+    /* Key Pillars / Highlights Grid */
+    .highlights-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 6px 20px;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 16px;
+      margin: 28px 0;
     }
 
-    .toc li a {
-      color: var(--primary);
-      text-decoration: none;
-      font-size: 0.9rem;
-      font-weight: 500;
+    .highlight-stat-card {
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 16px 18px;
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      box-shadow: var(--shadow-sm);
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
     }
 
-    .toc li a:hover {
-      text-decoration: underline;
+    .highlight-stat-card:hover {
+      box-shadow: var(--shadow-md);
+      border-color: #cbd5e1;
     }
 
-    /* Content Typography */
-    h2 {
-      font-size: 1.35rem;
-      font-weight: 700;
-      color: #0f172a;
-      margin: 36px 0 14px;
-      padding-top: 10px;
-      border-top: 1px solid #f1f5f9;
+    .highlight-stat-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 8px;
       display: flex;
       align-items: center;
-      gap: 8px;
+      justify-content: center;
+      font-size: 1.15rem;
+      flex-shrink: 0;
+    }
+
+    .icon-green { background: #dcfce7; color: #16a34a; }
+    .icon-blue { background: #dbeafe; color: #2563eb; }
+    .icon-purple { background: #ede9fe; color: #7c3aed; }
+    .icon-amber { background: #fef3c7; color: #d97706; }
+
+    .highlight-stat-title {
+      font-size: 0.92rem;
+      font-weight: 700;
+      color: var(--text-heading);
+      margin-bottom: 3px;
+    }
+
+    .highlight-stat-desc {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      line-height: 1.45;
+    }
+
+    /* Main Highlight Banner */
+    .highlight-card {
+      background: var(--success-bg);
+      border: 1px solid var(--success-border);
+      border-radius: var(--radius-md);
+      padding: 22px 24px;
+      margin: 28px 0 36px;
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+      box-shadow: 0 2px 6px rgba(22, 163, 74, 0.06);
+    }
+
+    .highlight-card .icon-check-wrapper {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: #bbf7d0;
+      color: #15803d;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+      font-weight: 800;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .highlight-card h4 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--success-text);
+      margin-bottom: 6px;
+    }
+
+    .highlight-card p {
+      font-size: 0.93rem;
+      color: #166534;
+      line-height: 1.65;
+      margin: 0;
+    }
+
+    /* Content Typography & Sections */
+    section {
+      margin-bottom: 42px;
+      scroll-margin-top: 86px;
+    }
+
+    h2 {
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--text-heading);
+      margin: 0 0 16px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border-subtle);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      letter-spacing: -0.015em;
+    }
+
+    .section-title-wrap {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .anchor-copy-btn {
+      opacity: 0;
+      color: var(--text-subtle);
+      text-decoration: none;
+      font-size: 1rem;
+      padding: 4px 6px;
+      border-radius: 4px;
+      transition: opacity 0.15s ease, color 0.15s ease;
+      cursor: pointer;
+    }
+
+    h2:hover .anchor-copy-btn {
+      opacity: 1;
+    }
+
+    .anchor-copy-btn:hover {
+      color: var(--primary);
+      background: var(--primary-light);
     }
 
     h3 {
-      font-size: 1.05rem;
+      font-size: 1.08rem;
       font-weight: 600;
-      color: #1e293b;
-      margin: 20px 0 8px;
+      color: var(--text-heading);
+      margin: 24px 0 10px;
     }
 
     p {
-      font-size: 0.95rem;
-      color: #334155;
+      font-size: 0.96rem;
+      color: var(--text-body);
       margin-bottom: 14px;
+      line-height: 1.7;
     }
 
     ul, ol {
-      padding-left: 22px;
-      margin-bottom: 16px;
+      padding-left: 24px;
+      margin-bottom: 18px;
     }
 
     li {
       font-size: 0.95rem;
-      color: #334155;
-      margin-bottom: 7px;
+      color: var(--text-body);
+      margin-bottom: 8px;
+      line-height: 1.65;
     }
 
     strong {
+      color: var(--text-heading);
+      font-weight: 600;
+    }
+
+    code {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      font-size: 0.86em;
+      background: #f1f5f9;
       color: #0f172a;
+      padding: 2px 6px;
+      border-radius: 4px;
+      border: 1px solid #e2e8f0;
     }
 
     a {
       color: var(--primary);
       text-decoration: none;
-      word-break: break-all;
+      font-weight: 500;
+      transition: color 0.15s ease;
     }
 
     a:hover {
+      color: var(--primary-hover);
       text-decoration: underline;
     }
 
     /* Tables */
     .table-container {
       overflow-x: auto;
-      margin: 18px 0 24px;
+      margin: 20px 0 24px;
       border: 1px solid var(--border);
-      border-radius: 8px;
+      border-radius: var(--radius-md);
+      background: #ffffff;
+      box-shadow: var(--shadow-sm);
     }
 
     table {
       width: 100%;
       border-collapse: collapse;
-      font-size: 0.88rem;
+      font-size: 0.89rem;
       text-align: left;
     }
 
     th {
       background: #f8fafc;
-      color: #334155;
-      font-weight: 600;
-      padding: 12px 14px;
+      color: var(--text-heading);
+      font-weight: 700;
+      padding: 13px 16px;
       border-bottom: 1px solid var(--border);
       white-space: nowrap;
+      font-size: 0.83rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
     }
 
     td {
-      padding: 12px 14px;
-      border-bottom: 1px solid var(--border);
-      color: #475569;
+      padding: 14px 16px;
+      border-bottom: 1px solid var(--border-subtle);
+      color: var(--text-body);
       vertical-align: top;
+      line-height: 1.55;
     }
 
     tr:last-child td {
       border-bottom: none;
     }
 
-    tr:hover td {
-      background-color: #fafbfc;
+    tbody tr:hover td {
+      background-color: #f8fafc;
     }
 
     .badge {
       display: inline-block;
-      padding: 2px 8px;
-      font-size: 0.75rem;
+      padding: 3px 9px;
+      font-size: 0.74rem;
       font-weight: 600;
       border-radius: 4px;
+      white-space: nowrap;
     }
 
     .badge-local {
       background-color: #e0f2fe;
       color: #0369a1;
+      border: 1px solid #bae6fd;
     }
 
     .badge-none {
       background-color: #dcfce7;
       color: #15803d;
+      border: 1px solid #bbf7d0;
     }
 
     .badge-user {
       background-color: #fef3c7;
       color: #b45309;
+      border: 1px solid #fde68a;
     }
 
-    /* Callout */
+    .badge-tier {
+      background: #e2e8f0;
+      color: #334155;
+      font-weight: 700;
+    }
+
+    /* Callout Boxes */
     .info-callout {
       background: var(--primary-light);
       border-left: 4px solid var(--primary);
-      padding: 14px 18px;
-      border-radius: 0 8px 8px 0;
-      margin: 18px 0;
+      padding: 16px 20px;
+      border-radius: 0 var(--radius-md) var(--radius-md) 0;
+      margin: 20px 0;
+      border-top: 1px solid var(--primary-border);
+      border-right: 1px solid var(--primary-border);
+      border-bottom: 1px solid var(--primary-border);
     }
 
     .info-callout p {
       margin: 0;
-      font-size: 0.9rem;
-      color: #1e40af;
+      font-size: 0.92rem;
+      color: var(--primary-text);
+      line-height: 1.6;
     }
 
+    /* Footer */
     footer {
       margin-top: 48px;
       padding-top: 24px;
       border-top: 1px solid var(--border);
-      font-size: 0.85rem;
+      font-size: 0.88rem;
       color: var(--text-muted);
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
+      align-items: center;
       gap: 12px;
     }
 
+    .footer-brand {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: 600;
+      color: var(--text-heading);
+    }
+
+    /* Floating Back to Top */
+    .back-to-top {
+      position: fixed;
+      bottom: 28px;
+      right: 28px;
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: var(--primary);
+      color: #ffffff;
+      border: none;
+      box-shadow: 0 4px 14px rgba(37, 99, 235, 0.4);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.2s ease;
+      z-index: 90;
+    }
+
+    .back-to-top.visible {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .back-to-top:hover {
+      background: var(--primary-hover);
+      transform: translateY(-2px);
+    }
+
+    /* Responsive Adjustments */
+    @media (max-width: 1120px) {
+      .layout-grid {
+        grid-template-columns: 280px minmax(0, 1fr);
+        gap: 24px;
+      }
+      .policy-content-card {
+        padding: 36px 36px;
+      }
+    }
+
+    @media (max-width: 900px) {
+      .layout-grid {
+        grid-template-columns: 1fr;
+      }
+      .sidebar-wrapper {
+        position: static;
+        max-height: none;
+        display: none; /* toggled via mobile menu */
+      }
+      .sidebar-wrapper.mobile-open {
+        display: flex;
+        margin-bottom: 24px;
+      }
+      .mobile-toc-toggle {
+        display: inline-flex;
+      }
+      .policy-content-card {
+        padding: 28px 22px;
+      }
+      .page-wrapper {
+        padding: 16px 14px 40px;
+      }
+      h1 {
+        font-size: 1.85rem;
+      }
+    }
+
+    /* Print Styles */
     @media print {
       body {
-        background: #fff;
-        padding: 0;
+        background: #ffffff !important;
+        color: #000000 !important;
+        padding: 0 !important;
       }
-      .container {
-        box-shadow: none;
-        padding: 0;
+      .site-nav,
+      .sidebar-wrapper,
+      .back-to-top,
+      .anchor-copy-btn,
+      .mobile-toc-toggle,
+      .highlights-grid {
+        display: none !important;
       }
-      .toc {
-        display: none;
+      .page-wrapper {
+        padding: 0 !important;
+        max-width: 100% !important;
+      }
+      .layout-grid {
+        display: block !important;
+      }
+      .policy-content-card {
+        border: none !important;
+        box-shadow: none !important;
+        padding: 0 !important;
+      }
+      h2, h3, .table-container, .highlight-card, .info-callout {
+        break-inside: avoid;
+      }
+      a {
+        text-decoration: none !important;
+        color: #000000 !important;
       }
     }
   </style>
 </head>
 <body>
 
-<div class="container">
-  
-  <header class="brand-header">
-    <div class="brand-badge">Official Store Compliance Policy</div>
-    <h1>Privacy Policy</h1>
-    <p class="app-subtitle"><strong>Mini Billy &ndash; Offline Point of Sale (POS) &amp; Inventory</strong></p>
-    <div class="meta-bar">
-      <span><strong>Developer:</strong> AIMZCODE</span>
-      <span><strong>Package / Bundle ID:</strong> <code>com.aimzcode.minibilly</code></span>
-      <span><strong>Effective Date:</strong> October 30, 2026</span>
-      <span><strong>Last Updated:</strong> October 31, 2026</span>
-    </div>
-  </header>
+<!-- Top Modern Sticky Header -->
+<header class="site-nav">
+  <div class="site-nav-container">
+    <a href="#top" class="brand-link" title="Mini Billy POS Privacy Policy">
+      <div class="brand-logo-icon">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+          <line x1="8" y1="21" x2="16" y2="21"></line>
+          <line x1="12" y1="17" x2="12" y2="21"></line>
+          <path d="M7 8h10"></path>
+          <path d="M7 11h6"></path>
+        </svg>
+      </div>
+      <div class="brand-text-block">
+        <span class="brand-title">Mini Billy</span>
+        <span class="brand-subtitle">Legal &amp; Privacy Portal</span>
+      </div>
+    </a>
 
-  <div class="highlight-card">
-    <div class="icon">&#10004;</div>
-    <div>
-      <h4>Privacy-First &amp; Offline by Default</h4>
-      <p>Mini Billy is built as an offline-first Point of Sale app. All business data &mdash; inventory, sales transactions, customer lists, prices, debt records, and receipts &mdash; is stored <strong>locally on your physical device</strong>. <strong>No account is needed to use Mini Billy, including on the Free plan.</strong> Sign-in is <strong>optional on the Free plan</strong> and <strong>required for Pro and above</strong>, and uses <strong>Google Sign-In</strong>. If you do not sign in, nothing leaves your device unless you choose to share or back it up. Accounts and cloud features exist only in the optional paid plans (Section 7A) and are used only if you sign in and turn them on. We do <strong>not</strong> use advertising or tracking SDKs, and we do <strong>not</strong> sell or rent your business records to anyone.</p>
+    <div class="nav-actions">
+      <button type="button" class="mobile-toc-toggle" id="mobile-toc-btn" aria-label="Toggle Table of Contents">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+        <span>Contents</span>
+      </button>
+
+      <button type="button" class="btn btn-secondary" onclick="window.print()" title="Print or save as PDF">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="6 9 6 2 18 2 18 9"></polyline>
+          <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
+          <rect x="6" y="14" width="12" height="8"></rect>
+        </svg>
+        <span>Print PDF</span>
+      </button>
+
+      <a href="mailto:musab.dot@gmail.com" class="btn btn-primary" title="Contact AIMZCODE">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+          <polyline points="22,6 12,13 2,6"></polyline>
+        </svg>
+        <span>Contact</span>
+      </a>
     </div>
   </div>
+</header>
 
-  <nav class="toc">
-    <h3>Contents</h3>
-    <ol>
-      <li><a href="#section-1">Overview &amp; Purpose</a></li>
-      <li><a href="#section-2">Information We Do Not Collect</a></li>
-      <li><a href="#section-3">Data Processed &amp; Stored Locally</a></li>
-      <li><a href="#section-4">Device Permissions &amp; Hardware Usage</a></li>
-      <li><a href="#section-5">Google Play Data Safety Disclosure</a></li>
-      <li><a href="#section-6">Apple App Store Privacy Details</a></li>
-      <li><a href="#section-7">Third-Party Services &amp; Network Activity</a></li>
-      <li><a href="#section-7a">Optional Accounts, Cloud &amp; Paid Plans</a></li>
-      <li><a href="#section-8">Data Retention, Backups &amp; Complete Deletion</a></li>
-      <li><a href="#section-9">User Rights (GDPR, CCPA &amp; Global Privacy)</a></li>
-      <li><a href="#section-10">Children&rsquo;s Privacy</a></li>
-      <li><a href="#section-11">Changes to This Policy</a></li>
-      <li><a href="#section-12">Developer Contact</a></li>
-    </ol>
-  </nav>
+<div class="page-wrapper" id="top">
+  <div class="layout-grid">
+    
+    <!-- Sticky Left Sidebar Navigation -->
+    <aside class="sidebar-wrapper" id="sidebar-drawer">
+      <div class="sidebar-panel">
+        <div class="sidebar-header">
+          <div class="sidebar-title">
+            <span>Table of Contents</span>
+            <span style="font-size: 0.72rem; color: var(--text-subtle);">13 Sections</span>
+          </div>
+          <div class="sidebar-search">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+            <input type="text" id="toc-filter" placeholder="Filter sections..." aria-label="Filter sections" />
+          </div>
+        </div>
 
-  <section id="section-1">
-    <h2>1. Overview &amp; Purpose</h2>
-    <p>This Privacy Policy applies to the <strong>Mini Billy</strong> mobile application (hereinafter referred to as the &ldquo;App&rdquo;), developed and published by <strong>AIMZCODE</strong> (&ldquo;we&rdquo;, &ldquo;us&rdquo;, or &ldquo;our&rdquo;), available for Android via the Google Play Store and iOS via the Apple App Store.</p>
-    <p>The App is designed to help small shop owners, merchants, retail stores, and service providers process sales, manage product inventory, track customer credit/debts, print receipts via Bluetooth thermal printers, and generate sales reports completely offline without requiring accounts, logins, or remote server storage. Optional paid plans add sign-in, Google Drive backup, and cloud backup and sync; those are described in Section 7A.</p>
-    <p>We respect your privacy and are committed to transparency in compliance with Google Play Developer Program Policies, Apple App Store Review Guidelines (Guideline 5.1), the European Union General Data Protection Regulation (GDPR), the California Consumer Privacy Act (CCPA), and other applicable global privacy regulations.</p>
-  </section>
+        <ul class="sidebar-nav-list" id="toc-list">
+          <li class="sidebar-nav-item">
+            <a href="#section-1" class="sidebar-nav-link" data-section="section-1">
+              <span class="section-num">01</span>
+              <span>Overview &amp; Purpose</span>
+            </a>
+          </li>
+          <li class="sidebar-nav-item">
+            <a href="#section-2" class="sidebar-nav-link" data-section="section-2">
+              <span class="section-num">02</span>
+              <span>Information We Do Not Collect</span>
+            </a>
+          </li>
+          <li class="sidebar-nav-item">
+            <a href="#section-3" class="sidebar-nav-link" data-section="section-3">
+              <span class="section-num">03</span>
+              <span>Data Processed &amp; Stored Locally</span>
+            </a>
+          </li>
+          <li class="sidebar-nav-item">
+            <a href="#section-4" class="sidebar-nav-link" data-section="section-4">
+              <span class="section-num">04</span>
+              <span>Device Permissions &amp; Hardware</span>
+            </a>
+          </li>
+          <li class="sidebar-nav-item">
+            <a href="#section-5" class="sidebar-nav-link" data-section="section-5">
+              <span class="section-num">05</span>
+              <span>Google Play Data Safety</span>
+            </a>
+          </li>
+          <li class="sidebar-nav-item">
+            <a href="#section-6" class="sidebar-nav-link" data-section="section-6">
+              <span class="section-num">06</span>
+              <span>Apple App Store Privacy Details</span>
+            </a>
+          </li>
+          <li class="sidebar-nav-item">
+            <a href="#section-7" class="sidebar-nav-link" data-section="section-7">
+              <span class="section-num">07</span>
+              <span>Third-Party &amp; Network Activity</span>
+            </a>
+          </li>
+          <li class="sidebar-nav-item">
+            <a href="#section-7a" class="sidebar-nav-link" data-section="section-7a">
+              <span class="section-num">7A</span>
+              <span>Optional Accounts &amp; Cloud Plans</span>
+            </a>
+          </li>
+          <li class="sidebar-nav-item">
+            <a href="#section-8" class="sidebar-nav-link" data-section="section-8">
+              <span class="section-num">08</span>
+              <span>Retention, Backups &amp; Deletion</span>
+            </a>
+          </li>
+          <li class="sidebar-nav-item">
+            <a href="#section-9" class="sidebar-nav-link" data-section="section-9">
+              <span class="section-num">09</span>
+              <span>User Rights (GDPR &amp; CCPA)</span>
+            </a>
+          </li>
+          <li class="sidebar-nav-item">
+            <a href="#section-10" class="sidebar-nav-link" data-section="section-10">
+              <span class="section-num">10</span>
+              <span>Children&rsquo;s Privacy</span>
+            </a>
+          </li>
+          <li class="sidebar-nav-item">
+            <a href="#section-11" class="sidebar-nav-link" data-section="section-11">
+              <span class="section-num">11</span>
+              <span>Changes to This Policy</span>
+            </a>
+          </li>
+          <li class="sidebar-nav-item">
+            <a href="#section-12" class="sidebar-nav-link" data-section="section-12">
+              <span class="section-num">12</span>
+              <span>Developer Contact</span>
+            </a>
+          </li>
+        </ul>
+      </div>
 
-  <section id="section-2">
-    <h2>2. Information We Do Not Collect</h2>
-    <p>Mini Billy operates locally on your smartphone or tablet. <strong>If you do not sign in and do not turn on cloud features (on any plan, including Free), AIMZCODE does not collect, receive, store, or monitor any of the following. In every case we never collect:</strong></p>
-    <ul>
-      <li><strong>No Account Needed, Even on the Free Plan:</strong> No registration, email address, password, or profile is needed to use the App. Your Google account details are collected only if you choose to sign in, or must sign in for a Pro or higher plan (Section 7A).</li>
-      <li><strong>No Analytics or Tracking IDs:</strong> We do not integrate third-party mobile measurement partners (MMPs), advertising trackers, or tracking SDKs (such as Google Firebase Analytics, Facebook SDK, Adjust, AppsFlyer, etc.).</li>
-      <li><strong>No Location Data:</strong> The App does not track, collect, or store your precise (GPS) or approximate geographic location.</li>
-      <li><strong>No Payment Card Numbers:</strong> We never see or store your card details for plan purchases; those are handled by Google Play, the Apple App Store, or your bank (Section 7A). While the App lets you record that a customer paid via card, bank transfer, or QR Pay for bookkeeping purposes, <em>the App does not process card numbers, CVVs, PINs, or financial transactions</em>. Cash and card processing remains entirely external to the App.</li>
-      <li><strong>No Advertising Identifiers:</strong> We do not read or transmit the Google Advertising ID (GAID) or Apple Identifier for Advertisers (IDFA).</li>
-    </ul>
-  </section>
+      <!-- Quick Document Info Card in Sidebar -->
+      <div class="sidebar-info-card">
+        <div class="info-row">
+          <span>Developer:</span>
+          <strong>AIMZCODE</strong>
+        </div>
+        <div class="info-row">
+          <span>Effective:</span>
+          <strong>Oct 30, 2026</strong>
+        </div>
+        <div class="info-row">
+          <span>Status:</span>
+          <strong style="color: var(--success);">&#10004; Verified</strong>
+        </div>
+        <div class="info-row" style="margin-top: 6px; padding-top: 6px; border-top: 1px dashed var(--border);">
+          <span>Questions?</span>
+          <a href="mailto:musab.dot@gmail.com" style="font-weight: 600;">Email Support</a>
+        </div>
+      </div>
+    </aside>
 
-  <section id="section-3">
-    <h2>3. Data Processed &amp; Stored Locally on Your Device</h2>
-    <p>Any data you enter into Mini Billy remains inside the App&rsquo;s sandboxed local storage on your device. This data includes:</p>
-    <ul>
-      <li><strong>Product Catalog:</strong> Item names, categories, variants (size, colour), prices, cost prices, SKUs, barcodes, and units of measurement.</li>
-      <li><strong>Product &amp; Shop Images:</strong> Product photos, shop logo, and merchant payment QR codes selected by you from your device&rsquo;s camera or photo library.</li>
-      <li><strong>Sales &amp; Transaction History:</strong> Order numbers, timestamps, purchased products, quantities, discounts, tax rates, payment methods chosen (e.g., Cash, Card, Credit, QR Pay), and refunds or corrections.</li>
-      <li><strong>Customer Records:</strong> Optional customer names, phone numbers, customer classification tiers (e.g., wholesaler, retailer, consumer), customer balances, and credit/debt transaction logs that you manually input.</li>
-      <li><strong>Daily Cash Closing Reports:</strong> Shift and daily cash counts, expected cash totals, and closing notes.</li>
-      <li><strong>Store Configuration:</strong> Shop name, shop address, contact phone number, receipt header/footer messages, and preferred currency (e.g., Rs, $, &euro;, etc.) and language settings (English, Tamil, Sinhala).</li>
-    </ul>
-    <p>This information is stored in a private local file (<code>mini_pos.json</code>) managed exclusively by your device&rsquo;s operating system.</p>
-  </section>
+    <!-- Main Content Area -->
+    <main class="policy-content-card">
+      
+      <!-- Brand & Document Header -->
+      <header class="brand-header">
+        <div class="badge-pill-row">
+          <div class="compliance-badge">
+            <span class="compliance-badge-dot"></span>
+            Official Store Compliance Policy
+          </div>
+          <span class="version-badge">Version 1.0</span>
+          <span class="version-badge">Android &amp; iOS</span>
+        </div>
+        
+        <h1>Privacy Policy</h1>
+        <p class="app-subtitle"><strong>Mini Billy &ndash; Offline Point of Sale (POS) &amp; Inventory Management</strong></p>
+        
+        <div class="meta-cards-grid">
+          <div class="meta-chip">
+            <span class="meta-chip-label">Developer</span>
+            <span class="meta-chip-val">AIMZCODE</span>
+          </div>
+          <div class="meta-chip">
+            <span class="meta-chip-label">Package / Bundle ID</span>
+            <span class="meta-chip-val"><code>com.aimzcode.minibilly</code></span>
+          </div>
+          <div class="meta-chip">
+            <span class="meta-chip-label">Effective Date</span>
+            <span class="meta-chip-val">October 30, 2026</span>
+          </div>
+          <div class="meta-chip">
+            <span class="meta-chip-label">Last Updated</span>
+            <span class="meta-chip-val">October 31, 2026</span>
+          </div>
+        </div>
+      </header>
 
-  <section id="section-4">
-    <h2>4. Device Permissions &amp; Hardware Usage</h2>
-    <p>Mini Billy requests minimal device permissions, strictly required to deliver the core POS functionalities. Below is the transparent breakdown of why each permission is requested:</p>
+      <!-- Key Visual Summary Pillars -->
+      <div class="highlights-grid">
+        <div class="highlight-stat-card">
+          <div class="highlight-stat-icon icon-green">&#128241;</div>
+          <div>
+            <div class="highlight-stat-title">100% Offline by Default</div>
+            <div class="highlight-stat-desc">Inventory, sales, and receipts stay strictly in your device sandbox. No account required.</div>
+          </div>
+        </div>
 
-    <div class="table-container">
-      <table>
-        <thead>
-          <tr>
-            <th>Permission / Capability</th>
-            <th>Platform</th>
-            <th>Exact Purpose &amp; Usage</th>
-            <th>Data Transmission</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><strong>Camera</strong><br/><code>CAMERA</code> / <code>NSCameraUsageDescription</code></td>
-            <td>Android &amp; iOS</td>
-            <td>Used exclusively when you tap the camera scan button to scan product barcodes/QR codes, or take a picture of a product directly from the product edit screen.</td>
-            <td><span class="badge badge-none">None &ndash; 100% Local</span><br/>Frames are processed in real-time on-device; no images or video streams are ever transmitted over the network.</td>
-          </tr>
-          <tr>
-            <td><strong>Photo Library / Media</strong><br/><code>NSPhotoLibraryUsageDescription</code> / Photo Picker</td>
-            <td>Android &amp; iOS</td>
-            <td>Used solely when you choose to attach an existing picture to a product, upload your business logo for printed receipts, or attach your merchant payment QR code.</td>
-            <td><span class="badge badge-none">None &ndash; 100% Local</span><br/>The App only accesses files you explicitly choose. Other personal photos remain untouched.</td>
-          </tr>
-          <tr>
-            <td><strong>Bluetooth</strong><br/><code>BLUETOOTH</code>, <code>BLUETOOTH_CONNECT</code>, <code>BLUETOOTH_SCAN</code> / <code>NSBluetoothAlwaysUsageDescription</code></td>
-            <td>Android &amp; iOS</td>
-            <td>Used solely to discover and pair with your ESC/POS thermal receipt printers (58mm / 80mm) to print receipts and barcode labels.</td>
-            <td><span class="badge badge-none">None &ndash; Local Peripheral</span><br/>Communication is strictly between your phone and your thermal printer. No data leaves the local Bluetooth connection.</td>
-          </tr>
-          <tr>
-            <td><strong>File Storage &amp; Sharing</strong><br/><code>path_provider</code>, <code>file_picker</code>, <code>share_plus</code></td>
-            <td>Android &amp; iOS</td>
-            <td>Used when you initiate: (1) creating or restoring a full JSON backup file, (2) importing/exporting product catalogs via CSV, backing up to or restoring from your own Google Drive (Pro and above), (3) sharing PDF or image receipts and sales reports to your printer, WhatsApp, or email.</td>
-            <td><span class="badge badge-user">User-Initiated Only</span><br/>Exported files are only transferred if and when you choose to share them using your device&rsquo;s native OS Share Sheet.</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+        <div class="highlight-stat-card">
+          <div class="highlight-stat-icon icon-blue">&#128737;</div>
+          <div>
+            <div class="highlight-stat-title">Zero Tracking or Ads</div>
+            <div class="highlight-stat-desc">No advertising SDKs, no Google Analytics, no tracking IDs (GAID/IDFA), no location tracking.</div>
+          </div>
+        </div>
 
-    <div class="info-callout">
-      <p><strong>Note on Optional Permissions:</strong> You can revoke Camera, Photo, or Bluetooth permissions at any time through your device&rsquo;s Settings. If revoked, features that do not depend on those permissions (such as manual cashier entry, cash register sales, and viewing sales history) will continue to work normally.</p>
-    </div>
-  </section>
+        <div class="highlight-stat-card">
+          <div class="highlight-stat-icon icon-purple">&#128274;</div>
+          <div>
+            <div class="highlight-stat-title">Full Data Ownership</div>
+            <div class="highlight-stat-desc">Export JSON and CSV archives anytime, or delete all records instantly with complete peace of mind.</div>
+          </div>
+        </div>
 
-  <section id="section-5">
-    <h2>5. Google Play Data Safety Disclosure</h2>
-    <p>To assist users and comply with the Google Play Developer Console <strong>Data Safety</strong> requirements, here is the exact classification of data handling in Mini Billy:</p>
+        <div class="highlight-stat-card">
+          <div class="highlight-stat-icon icon-amber">&#9729;</div>
+          <div>
+            <div class="highlight-stat-title">Optional Cloud Sync</div>
+            <div class="highlight-stat-desc">Google Sign-In and cloud sync are only activated if you choose to sign in on optional paid tiers.</div>
+          </div>
+        </div>
+      </div>
 
-    <div class="table-container">
-      <table>
-        <thead>
-          <tr>
-            <th>Data Category</th>
-            <th>Collected by Developer?</th>
-            <th>Shared with Third Parties?</th>
-            <th>Handled Locally on Device?</th>
-            <th>Google Play Declaration</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><strong>Personal Info</strong> (Name, Email, Phone, Address)</td>
-            <td>Google email address and name, only if you sign in</td>
-            <td>No (hosted with our processor, Supabase)</td>
-            <td>Yes (customer directory and shop profile stay on the device unless you turn on cloud sync)</td>
-            <td><span class="badge badge-user">Email and name: only if you sign in, for account management</span></td>
-          </tr>
-          <tr>
-            <td><strong>Financial Info</strong> (Sales, Receipts, Debt Ledger)</td>
-            <td>No</td>
-            <td>No</td>
-            <td>Yes (Stored strictly in local app sandbox)</td>
-            <td><span class="badge badge-none">No Data Collected</span></td>
-          </tr>
-          <tr>
-            <td><strong>Photos &amp; Videos</strong> (Product &amp; Logo Images)</td>
-            <td>No</td>
-            <td>No</td>
-            <td>Yes (Stored strictly in local app sandbox)</td>
-            <td><span class="badge badge-none">No Data Collected</span></td>
-          </tr>
-          <tr>
-            <td><strong>Location</strong></td>
-            <td>No</td>
-            <td>No</td>
-            <td>No</td>
-            <td><span class="badge badge-none">No Data Collected</span></td>
-          </tr>
-          <tr>
-            <td><strong>Device or Other IDs</strong> (IMEI, GAID, IP)</td>
-            <td>No</td>
-            <td>No</td>
-            <td>No</td>
-            <td><span class="badge badge-none">No Data Collected</span></td>
-          </tr>
-          <tr>
-            <td><strong>App Activity &amp; Analytics</strong></td>
-            <td>No</td>
-            <td>No</td>
-            <td>No</td>
-            <td><span class="badge badge-none">No Data Collected</span></td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-    <p><strong>Summary for Google Play:</strong> If you do not sign in, the App does not collect user data. If you sign in (on any plan) we collect your <strong>Google email address, name and user ID</strong> and <strong>purchase history</strong> (purchase history only if you buy a plan; for account management and app functionality), and if you turn on cloud sync on a plan that includes it we store the <strong>business data you sync</strong> (app functionality). Data is encrypted in transit and you can request deletion in the App or by email. Data is not sold and not used for advertising.</p>
-  </section>
+      <!-- Main Highlight Banner -->
+      <div class="highlight-card">
+        <div class="icon-check-wrapper">&#10004;</div>
+        <div>
+          <h4>Privacy-First &amp; Offline by Default</h4>
+          <p>Mini Billy is built as an offline-first Point of Sale app. All business data &mdash; inventory, sales transactions, customer lists, prices, debt records, and receipts &mdash; is stored <strong>locally on your physical device</strong>. <strong>No account is needed to use Mini Billy, including on the Free plan.</strong> Sign-in is <strong>optional on the Free plan</strong> and <strong>required for Pro and above</strong>, and uses <strong>Google Sign-In</strong>. If you do not sign in, nothing leaves your device unless you choose to share or back it up. Accounts and cloud features exist only in the optional paid plans (Section 7A) and are used only if you sign in and turn them on. We do <strong>not</strong> use advertising or tracking SDKs, and we do <strong>not</strong> sell or rent your business records to anyone.</p>
+        </div>
+      </div>
 
-  <section id="section-6">
-    <h2>6. Apple App Store Privacy Details (App Privacy Labels)</h2>
-    <p>Under Apple&rsquo;s App Store Connect Privacy Information (&ldquo;Privacy Nutrition Labels&rdquo;), Mini Billy qualifies under the following declaration:</p>
-    <ul>
-      <li><strong>Data Used to Track You:</strong> <span class="badge badge-none">None</span> &ndash; The App does not track you across apps and websites owned by other companies.</li>
-      <li><strong>Data Linked to You (only if you sign in):</strong> <strong>Contact Info</strong> (email address, name), <strong>Identifiers</strong> (user ID), <strong>Purchases</strong> (plan and purchase status) and, if you turn on cloud sync, <strong>User Content</strong> and <strong>Financial Info</strong> (the shop data you sync). All are used for <em>App Functionality</em> and account management only.</li>
-      <li><strong>Not signed in (including Free plan):</strong> <span class="badge badge-none">Data Not Collected</span> &ndash; no data is collected when you do not sign in.</li>
-    </ul>
-  </section>
+      <!-- SECTION 1 -->
+      <section id="section-1">
+        <h2>
+          <span class="section-title-wrap">1. Overview &amp; Purpose</span>
+          <a href="#section-1" class="anchor-copy-btn" title="Copy link to this section">&#128279;</a>
+        </h2>
+        <p>This Privacy Policy applies to the <strong>Mini Billy</strong> mobile application (hereinafter referred to as the &ldquo;App&rdquo;), developed and published by <strong>AIMZCODE</strong> (&ldquo;we&rdquo;, &ldquo;us&rdquo;, or &ldquo;our&rdquo;), available for Android via the Google Play Store and iOS via the Apple App Store.</p>
+        <p>The App is designed to help small shop owners, merchants, retail stores, and service providers process sales, manage product inventory, track customer credit/debts, print receipts via Bluetooth thermal printers, and generate sales reports completely offline without requiring accounts, logins, or remote server storage. Optional paid plans add sign-in, Google Drive backup, and cloud backup and sync; those are described in Section 7A.</p>
+        <p>We respect your privacy and are committed to transparency in compliance with Google Play Developer Program Policies, Apple App Store Review Guidelines (Guideline 5.1), the European Union General Data Protection Regulation (GDPR), the California Consumer Privacy Act (CCPA), and other applicable global privacy regulations.</p>
+      </section>
 
-  <section id="section-7">
-    <h2>7. Third-Party Services &amp; Network Activity</h2>
-    <p>Mini Billy is designed to work offline. Without signing in, the App makes network requests only on your direct action. If you sign in, it also contacts our servers to sign you in, check your plan and, if enabled, back up and sync, as described in Section 7A. The user-initiated interactions are:</p>
-    <ul>
-      <li><strong>Optional Google Sheets Catalog Import:</strong> If you choose to import product inventory from a public or shared Google Sheets document, the App sends a single direct HTTP request to download that public spreadsheet data into your local device catalog. No merchant credentials or sales records are transmitted during this operation.</li>
-      <li><strong>Native OS Share Sheet:</strong> If you choose to export reports (CSV/PDF) or backup files using WhatsApp, Gmail, Google Drive, or AirDrop, the transmission is handled directly by your device&rsquo;s operating system and chosen third-party application under their respective privacy policies.</li>
-    </ul>
-  </section>
+      <!-- SECTION 2 -->
+      <section id="section-2">
+        <h2>
+          <span class="section-title-wrap">2. Information We Do Not Collect</span>
+          <a href="#section-2" class="anchor-copy-btn" title="Copy link to this section">&#128279;</a>
+        </h2>
+        <p>Mini Billy operates locally on your smartphone or tablet. <strong>If you do not sign in and do not turn on cloud features (on any plan, including Free), AIMZCODE does not collect, receive, store, or monitor any of the following. In every case we never collect:</strong></p>
+        <ul>
+          <li><strong>No Account Needed, Even on the Free Plan:</strong> No registration, email address, password, or profile is needed to use the App. Your Google account details are collected only if you choose to sign in, or must sign in for a Pro or higher plan (Section 7A).</li>
+          <li><strong>No Analytics or Tracking IDs:</strong> We do not integrate third-party mobile measurement partners (MMPs), advertising trackers, or tracking SDKs (such as Google Firebase Analytics, Facebook SDK, Adjust, AppsFlyer, etc.).</li>
+          <li><strong>No Location Data:</strong> The App does not track, collect, or store your precise (GPS) or approximate geographic location.</li>
+          <li><strong>No Payment Card Numbers:</strong> We never see or store your card details for plan purchases; those are handled by Google Play, the Apple App Store, or your bank (Section 7A). While the App lets you record that a customer paid via card, bank transfer, or QR Pay for bookkeeping purposes, <em>the App does not process card numbers, CVVs, PINs, or financial transactions</em>. Cash and card processing remains entirely external to the App.</li>
+          <li><strong>No Advertising Identifiers:</strong> We do not read or transmit the Google Advertising ID (GAID) or Apple Identifier for Advertisers (IDFA).</li>
+        </ul>
+      </section>
 
-  <section id="section-7a">
-    <h2>7A. Optional Accounts, Cloud &amp; Paid Plans</h2>
-    <p>Mini Billy offers four plans. You sign in with <strong>Google Sign-In</strong>. Signing in is <strong>optional on Free</strong> and <strong>required on Pro, Pro Max and Ultra Pro Max</strong>. Backing up to Google Drive needs sign-in on every plan. <strong>Free</strong> and <strong>Pro</strong> work offline; <strong>Pro Max</strong> and <strong>Ultra Pro Max</strong> add cloud backup and sync. Features that need an account or internet stay off until you sign in and turn them on.</p>
+      <!-- SECTION 3 -->
+      <section id="section-3">
+        <h2>
+          <span class="section-title-wrap">3. Data Processed &amp; Stored Locally on Your Device</span>
+          <a href="#section-3" class="anchor-copy-btn" title="Copy link to this section">&#128279;</a>
+        </h2>
+        <p>Any data you enter into Mini Billy remains inside the App&rsquo;s sandboxed local storage on your device. This data includes:</p>
+        <ul>
+          <li><strong>Product Catalog:</strong> Item names, categories, variants (size, colour), prices, cost prices, SKUs, barcodes, and units of measurement.</li>
+          <li><strong>Product &amp; Shop Images:</strong> Product photos, shop logo, and merchant payment QR codes selected by you from your device&rsquo;s camera or photo library.</li>
+          <li><strong>Sales &amp; Transaction History:</strong> Order numbers, timestamps, purchased products, quantities, discounts, tax rates, payment methods chosen (e.g., Cash, Card, Credit, QR Pay), and refunds or corrections.</li>
+          <li><strong>Customer Records:</strong> Optional customer names, phone numbers, customer classification tiers (e.g., wholesaler, retailer, consumer), customer balances, and credit/debt transaction logs that you manually input.</li>
+          <li><strong>Daily Cash Closing Reports:</strong> Shift and daily cash counts, expected cash totals, and closing notes.</li>
+          <li><strong>Store Configuration:</strong> Shop name, shop address, contact phone number, receipt header/footer messages, and preferred currency (e.g., Rs, $, &euro;, etc.) and language settings (English, Tamil, Sinhala).</li>
+        </ul>
+        <p>This information is stored in a private local file (<code>mini_pos.json</code>) managed exclusively by your device&rsquo;s operating system.</p>
+      </section>
 
-    <div class="table-container">
-      <table>
-        <thead>
-          <tr><th>Plan</th><th>Account</th><th>What leaves your device</th></tr>
-        </thead>
-        <tbody>
-          <tr><td><strong>Free</strong></td><td>Optional</td><td>Not signed in: nothing, unless you share a backup or export file yourself or choose the optional Google Sheets import. Signed in with Google: your Google email address, name and user ID, and backup files to your own Google Drive if you use that.</td></tr>
-          <tr><td><strong>Pro</strong> (one-time purchase)</td><td>Required (Google Sign-In); works offline after activation</td><td>Your Google email address, name and user ID, and licence status. If you use Google Drive backup, backup files go to your own Google Drive.</td></tr>
-          <tr><td><strong>Pro Max</strong> (yearly)</td><td>Required; up to 5 users on one account</td><td>Your email address, licence status, and, when cloud backup and sync is on, your shop data (below).</td></tr>
-          <tr><td><strong>Ultra Pro Max</strong> (yearly)</td><td>Required; unlimited users and multiple stores on one account</td><td>As Pro Max, for each store on the account.</td></tr>
-        </tbody>
-      </table>
-    </div>
+      <!-- SECTION 4 -->
+      <section id="section-4">
+        <h2>
+          <span class="section-title-wrap">4. Device Permissions &amp; Hardware Usage</span>
+          <a href="#section-4" class="anchor-copy-btn" title="Copy link to this section">&#128279;</a>
+        </h2>
+        <p>Mini Billy requests minimal device permissions, strictly required to deliver the core POS functionalities. Below is the transparent breakdown of why each permission is requested:</p>
 
-    <h3>What we collect when you sign in</h3>
-    <ul>
-      <li><strong>Google account details</strong> shared by Google Sign-In: your email address, name and Google user ID. We use them to sign you in and link your plan to you. We never receive your Google password.</li>
-      <li><strong>Plan and purchase status</strong> (plan, start and end date, and a purchase reference), to unlock the features you paid for. We do not receive your card number.</li>
-      <li><strong>Staff users</strong> (Pro Max and Ultra Pro Max): the names or emails and roles of the people you add to your account, as you enter them.</li>
-      <li><strong>Shop data you sync</strong>, only when you turn on cloud backup and sync: your products, sales, customers and debts, stock records, settings, and photos. This is business data you entered; we use it only to back up, restore and sync it for you and your users. We do not read it for advertising or profiling, and we do not sell it.</li>
-    </ul>
+        <div class="table-container">
+          <table>
+            <thead>
+              <tr>
+                <th>Permission / Capability</th>
+                <th>Platform</th>
+                <th>Exact Purpose &amp; Usage</th>
+                <th>Data Transmission</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Camera</strong><br/><code>CAMERA</code> / <code>NSCameraUsageDescription</code></td>
+                <td>Android &amp; iOS</td>
+                <td>Used exclusively when you tap the camera scan button to scan product barcodes/QR codes, or take a picture of a product directly from the product edit screen.</td>
+                <td><span class="badge badge-none">None &ndash; 100% Local</span><br/>Frames are processed in real-time on-device; no images or video streams are ever transmitted over the network.</td>
+              </tr>
+              <tr>
+                <td><strong>Photo Library / Media</strong><br/><code>NSPhotoLibraryUsageDescription</code> / Photo Picker</td>
+                <td>Android &amp; iOS</td>
+                <td>Used solely when you choose to attach an existing picture to a product, upload your business logo for printed receipts, or attach your merchant payment QR code.</td>
+                <td><span class="badge badge-none">None &ndash; 100% Local</span><br/>The App only accesses files you explicitly choose. Other personal photos remain untouched.</td>
+              </tr>
+              <tr>
+                <td><strong>Bluetooth</strong><br/><code>BLUETOOTH</code>, <code>BLUETOOTH_CONNECT</code>, <code>BLUETOOTH_SCAN</code> / <code>NSBluetoothAlwaysUsageDescription</code></td>
+                <td>Android &amp; iOS</td>
+                <td>Used solely to discover and pair with your ESC/POS thermal receipt printers (58mm / 80mm) to print receipts and barcode labels.</td>
+                <td><span class="badge badge-none">None &ndash; Local Peripheral</span><br/>Communication is strictly between your phone and your thermal printer. No data leaves the local Bluetooth connection.</td>
+              </tr>
+              <tr>
+                <td><strong>File Storage &amp; Sharing</strong><br/><code>path_provider</code>, <code>file_picker</code>, <code>share_plus</code></td>
+                <td>Android &amp; iOS</td>
+                <td>Used when you initiate: (1) creating or restoring a full JSON backup file, (2) importing/exporting product catalogs via CSV, backing up to or restoring from your own Google Drive (Pro and above), (3) sharing PDF or image receipts and sales reports to your printer, WhatsApp, or email.</td>
+                <td><span class="badge badge-user">User-Initiated Only</span><br/>Exported files are only transferred if and when you choose to share them using your device&rsquo;s native OS Share Sheet.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
 
-    <h3>How plans are paid for</h3>
-    <ul>
-      <li><strong>Google Play or Apple App Store billing:</strong> payment is handled entirely by Google or Apple under their terms and privacy policies. We receive a purchase confirmation and reference, not your card or bank details.</li>
-      <li><strong>Bank transfer:</strong> you pay AIMZCODE by bank transfer and send us the payment slip or reference (for example by email or WhatsApp). We use it only to confirm the payment and activate your plan, and keep payment records as long as accounting and tax rules require.</li>
-    </ul>
+        <div class="info-callout">
+          <p><strong>Note on Optional Permissions:</strong> You can revoke Camera, Photo, or Bluetooth permissions at any time through your device&rsquo;s Settings. If revoked, features that do not depend on those permissions (such as manual cashier entry, cash register sales, and viewing sales history) will continue to work normally.</p>
+        </div>
+      </section>
 
-    <h3>Where cloud data is stored and who processes it</h3>
-    <p>Sign-in, plan status and (for Pro Max and Ultra Pro Max) synced shop data are hosted with our cloud provider, <strong>Supabase</strong>, which acts as our data processor. Data is encrypted in transit (HTTPS/TLS) and access is limited so that each account can read only its own data. Backups you send to <strong>your own Google Drive</strong> are stored by Google in your Drive; the App asks Google for access only to the backup files it creates, and you can remove that access at any time in your Google Account settings.</p>
+      <!-- SECTION 5 -->
+      <section id="section-5">
+        <h2>
+          <span class="section-title-wrap">5. Google Play Data Safety Disclosure</span>
+          <a href="#section-5" class="anchor-copy-btn" title="Copy link to this section">&#128279;</a>
+        </h2>
+        <p>To assist users and comply with the Google Play Developer Console <strong>Data Safety</strong> requirements, here is the exact classification of data handling in Mini Billy:</p>
 
-    <h3>Offline use</h3>
-    <p>On Pro, Pro Max and Ultra Pro Max the App always works from a database on your device, so a lost connection never stops you from selling. While offline it keeps working on that local data for a limited time. When the internet returns, the App automatically checks your plan again and, on Pro Max and Ultra Pro Max, syncs the changes made offline to the cloud. On Pro, the re-check confirms your licence and sends any pending Google Drive backup.</p>
+        <div class="table-container">
+          <table>
+            <thead>
+              <tr>
+                <th>Data Category</th>
+                <th>Collected by Developer?</th>
+                <th>Shared with Third Parties?</th>
+                <th>Handled Locally on Device?</th>
+                <th>Google Play Declaration</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Personal Info</strong><br/>(Name, Email, Phone, Address)</td>
+                <td>Google email address and name, only if you sign in</td>
+                <td>No (hosted with our processor, Supabase)</td>
+                <td>Yes (customer directory and shop profile stay on the device unless you turn on cloud sync)</td>
+                <td><span class="badge badge-user">Email and name: only if you sign in, for account management</span></td>
+              </tr>
+              <tr>
+                <td><strong>Financial Info</strong><br/>(Sales, Receipts, Debt Ledger)</td>
+                <td>No</td>
+                <td>No</td>
+                <td>Yes (Stored strictly in local app sandbox)</td>
+                <td><span class="badge badge-none">No Data Collected</span></td>
+              </tr>
+              <tr>
+                <td><strong>Photos &amp; Videos</strong><br/>(Product &amp; Logo Images)</td>
+                <td>No</td>
+                <td>No</td>
+                <td>Yes (Stored strictly in local app sandbox)</td>
+                <td><span class="badge badge-none">No Data Collected</span></td>
+              </tr>
+              <tr>
+                <td><strong>Location</strong></td>
+                <td>No</td>
+                <td>No</td>
+                <td>No</td>
+                <td><span class="badge badge-none">No Data Collected</span></td>
+              </tr>
+              <tr>
+                <td><strong>Device or Other IDs</strong><br/>(IMEI, GAID, IP)</td>
+                <td>No</td>
+                <td>No</td>
+                <td>No</td>
+                <td><span class="badge badge-none">No Data Collected</span></td>
+              </tr>
+              <tr>
+                <td><strong>App Activity &amp; Analytics</strong></td>
+                <td>No</td>
+                <td>No</td>
+                <td>No</td>
+                <td><span class="badge badge-none">No Data Collected</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p><strong>Summary for Google Play:</strong> If you do not sign in, the App does not collect user data. If you sign in (on any plan) we collect your <strong>Google email address, name and user ID</strong> and <strong>purchase history</strong> (purchase history only if you buy a plan; for account management and app functionality), and if you turn on cloud sync on a plan that includes it we store the <strong>business data you sync</strong> (app functionality). Data is encrypted in transit and you can request deletion in the App or by email. Data is not sold and not used for advertising.</p>
+      </section>
 
-    <h3>Your choices</h3>
-    <ul>
-      <li>You can use the Free plan without ever signing in. Signing in on Free links your Google account to the App and lets you back up to your Google Drive; it does not upload your shop data to our servers unless you are on a plan with cloud sync and turn it on.</li>
-      <li>You can turn off cloud sync, sign out, or export all your data as a JSON backup and CSV files at any time.</li>
-      <li>If a paid plan ends or you return to Free, your data stays on your device and you can keep selling within the Free plan limits.</li>
-    </ul>
-  </section>
+      <!-- SECTION 6 -->
+      <section id="section-6">
+        <h2>
+          <span class="section-title-wrap">6. Apple App Store Privacy Details (App Privacy Labels)</span>
+          <a href="#section-6" class="anchor-copy-btn" title="Copy link to this section">&#128279;</a>
+        </h2>
+        <p>Under Apple&rsquo;s App Store Connect Privacy Information (&ldquo;Privacy Nutrition Labels&rdquo;), Mini Billy qualifies under the following declaration:</p>
+        <ul>
+          <li><strong>Data Used to Track You:</strong> <span class="badge badge-none">None</span> &ndash; The App does not track you across apps and websites owned by other companies.</li>
+          <li><strong>Data Linked to You (only if you sign in):</strong> <strong>Contact Info</strong> (email address, name), <strong>Identifiers</strong> (user ID), <strong>Purchases</strong> (plan and purchase status) and, if you turn on cloud sync, <strong>User Content</strong> and <strong>Financial Info</strong> (the shop data you sync). All are used for <em>App Functionality</em> and account management only.</li>
+          <li><strong>Not signed in (including Free plan):</strong> <span class="badge badge-none">Data Not Collected</span> &ndash; no data is collected when you do not sign in.</li>
+        </ul>
+      </section>
 
-  <section id="section-8">
-    <h2>8. Data Retention, Backups &amp; Complete Deletion</h2>
-    <h3>Data Ownership &amp; Retention</h3>
-    <p>Because all data is stored on your device, you maintain full and absolute ownership of your business data. Data is retained on your device for as long as you keep the App installed.</p>
+      <!-- SECTION 7 -->
+      <section id="section-7">
+        <h2>
+          <span class="section-title-wrap">7. Third-Party Services &amp; Network Activity</span>
+          <a href="#section-7" class="anchor-copy-btn" title="Copy link to this section">&#128279;</a>
+        </h2>
+        <p>Mini Billy is designed to work offline. Without signing in, the App makes network requests only on your direct action. If you sign in, it also contacts our servers to sign you in, check your plan and, if enabled, back up and sync, as described in Section 7A. The user-initiated interactions are:</p>
+        <ul>
+          <li><strong>Optional Google Sheets Catalog Import:</strong> If you choose to import product inventory from a public or shared Google Sheets document, the App sends a single direct HTTP request to download that public spreadsheet data into your local device catalog. No merchant credentials or sales records are transmitted during this operation.</li>
+          <li><strong>Native OS Share Sheet:</strong> If you choose to export reports (CSV/PDF) or backup files using WhatsApp, Gmail, Google Drive, or AirDrop, the transmission is handled directly by your device&rsquo;s operating system and chosen third-party application under their respective privacy policies.</li>
+        </ul>
+      </section>
 
-    <h3>Local Backups</h3>
-    <p>Mini Billy includes built-in safeguards to protect your business records against accidental loss:</p>
-    <ul>
-      <li><strong>Automatic Daily Rolling Backups:</strong> The App maintains local snapshots of your data on the device, keeping the last 7 daily backups automatically.</li>
-      <li><strong>Manual Backup &amp; Restore:</strong> You can create complete backup archives (including products, history, and photos) at any time and store them safely on your local storage, external SD card, or personal cloud storage.</li>
-    </ul>
+      <!-- SECTION 7A -->
+      <section id="section-7a">
+        <h2>
+          <span class="section-title-wrap">7A. Optional Accounts, Cloud &amp; Paid Plans</span>
+          <a href="#section-7a" class="anchor-copy-btn" title="Copy link to this section">&#128279;</a>
+        </h2>
+        <p>Mini Billy offers four plans. You sign in with <strong>Google Sign-In</strong>. Signing in is <strong>optional on Free</strong> and <strong>required on Pro, Pro Max and Ultra Pro Max</strong>. Backing up to Google Drive needs sign-in on every plan. <strong>Free</strong> and <strong>Pro</strong> work offline; <strong>Pro Max</strong> and <strong>Ultra Pro Max</strong> add cloud backup and sync. Features that need an account or internet stay off until you sign in and turn them on.</p>
 
-    <h3>Data Deletion</h3>
-    <p>In compliance with Google Play&rsquo;s Data Deletion Policy and Apple&rsquo;s User Privacy Guidelines:</p>
-    <ul>
-      <li>If you never signed in, we hold no account or server data, so there is nothing for us to delete.</li>
-      <li>If you created an account, you can <strong>delete your account in the App</strong> (More &rsaquo; Account &rsaquo; Delete account), or email us at the address in Section 12. We delete your account, plan record and all synced cloud data within 30 days, except payment records we must keep for accounting or tax law. Data on your own devices and in your own Google Drive is not affected; you can delete it yourself.</li>
-      <li>If a yearly plan ends and is not renewed, synced cloud data is kept for 30 days so you can renew or download it, then deleted.</li>
-      <li>To completely and permanently delete all data stored in Mini Billy, delete the data on your device by <strong>clearing the App Storage / Cache</strong> in your device&rsquo;s Settings or <strong>uninstall the App</strong>. All local databases, catalogs, customer lists, and backup files stored within the App&rsquo;s sandboxed directory will be immediately and irreversibly erased.</li>
-    </ul>
-  </section>
+        <div class="table-container">
+          <table>
+            <thead>
+              <tr>
+                <th>Plan Tier</th>
+                <th>Account Requirement</th>
+                <th>What Leaves Your Device</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><span class="badge badge-tier">Free</span></td>
+                <td>Optional</td>
+                <td>Not signed in: nothing, unless you share a backup or export file yourself or choose the optional Google Sheets import. Signed in with Google: your Google email address, name and user ID, and backup files to your own Google Drive if you use that.</td>
+              </tr>
+              <tr>
+                <td><span class="badge badge-local">Pro</span><br/><small style="color:var(--text-muted);">(One-time purchase)</small></td>
+                <td>Required (Google Sign-In); works offline after activation</td>
+                <td>Your Google email address, name and user ID, and licence status. If you use Google Drive backup, backup files go to your own Google Drive.</td>
+              </tr>
+              <tr>
+                <td><span class="badge badge-none">Pro Max</span><br/><small style="color:var(--text-muted);">(Yearly plan)</small></td>
+                <td>Required; up to 5 users on one account</td>
+                <td>Your email address, licence status, and, when cloud backup and sync is on, your shop data (below).</td>
+              </tr>
+              <tr>
+                <td><span class="badge badge-user">Ultra Pro Max</span><br/><small style="color:var(--text-muted);">(Yearly plan)</small></td>
+                <td>Required; unlimited users and multiple stores on one account</td>
+                <td>As Pro Max, for each store on the account.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
 
-  <section id="section-9">
-    <h2>9. User Rights (GDPR, CCPA &amp; Global Privacy)</h2>
-    <p>Depending on your jurisdiction (such as the European Economic Area under GDPR, or California under CCPA/CPRA), you have rights regarding your personal data:</p>
-    <ul>
-      <li><strong>Right to Access &amp; Portability:</strong> You can export your complete product catalog, sales records, and business data at any time via the App&rsquo;s CSV and JSON backup export tools.</li>
-      <li><strong>Right to Rectification:</strong> You can edit, correct, or update any product, customer, or business information directly within the App interface.</li>
-      <li><strong>Right to Erasure (Right to Be Forgotten):</strong> You can delete individual records or wipe the database by clearing app data, and you can delete your account and cloud data as described in Section 8.</li>
-      <li><strong>Do Not Sell My Personal Information:</strong> We do not sell, rent, or trade personal data or business information under any circumstances, and we do not share data for cross-context behavioural advertising.</li>
-    </ul>
-  </section>
+        <h3>What we collect when you sign in</h3>
+        <ul>
+          <li><strong>Google account details</strong> shared by Google Sign-In: your email address, name and Google user ID. We use them to sign you in and link your plan to you. We never receive your Google password.</li>
+          <li><strong>Plan and purchase status</strong> (plan, start and end date, and a purchase reference), to unlock the features you paid for. We do not receive your card number.</li>
+          <li><strong>Staff users</strong> (Pro Max and Ultra Pro Max): the names or emails and roles of the people you add to your account, as you enter them.</li>
+          <li><strong>Shop data you sync</strong>, only when you turn on cloud backup and sync: your products, sales, customers and debts, stock records, settings, and photos. This is business data you entered; we use it only to back up, restore and sync it for you and your users. We do not read it for advertising or profiling, and we do not sell it.</li>
+        </ul>
 
-  <section id="section-10">
-    <h2>10. Children&rsquo;s Privacy</h2>
-    <p>Mini Billy is a point of sale and inventory management tool intended for commercial business use by adults and business owners. It is not directed at children under the age of 13 (or under 16 in the European Union). We do not knowingly solicit or collect data from children. If you believe that a child has provided personal information within the App on a device, such data can be permanently removed by clearing the App&rsquo;s data on that device.</p>
-  </section>
+        <h3>How plans are paid for</h3>
+        <ul>
+          <li><strong>Google Play or Apple App Store billing:</strong> payment is handled entirely by Google or Apple under their terms and privacy policies. We receive a purchase confirmation and reference, not your card or bank details.</li>
+          <li><strong>Bank transfer:</strong> you pay AIMZCODE by bank transfer and send us the payment slip or reference (for example by email or WhatsApp). We use it only to confirm the payment and activate your plan, and keep payment records as long as accounting and tax rules require.</li>
+        </ul>
 
-  <section id="section-11">
-    <h2>11. Changes to This Privacy Policy</h2>
-    <p>We may update this Privacy Policy from time to time to reflect modifications to the App, operating system requirements, or store developer guidelines. When updates are made, the revised policy will be posted on this page with an updated &ldquo;Last Updated&rdquo; date at the top. We encourage you to review this page periodically.</p>
-  </section>
+        <h3>Where cloud data is stored and who processes it</h3>
+        <p>Sign-in, plan status and (for Pro Max and Ultra Pro Max) synced shop data are hosted with our cloud provider, <strong>Supabase</strong>, which acts as our data processor. Data is encrypted in transit (HTTPS/TLS) and access is limited so that each account can read only its own data. Backups you send to <strong>your own Google Drive</strong> are stored by Google in your Drive; the App asks Google for access only to the backup files it creates, and you can remove that access at any time in your Google Account settings.</p>
 
-  <section id="section-12">
-    <h2>12. Contact Information</h2>
-    <p>If you have any questions, suggestions, or concerns regarding this Privacy Policy, your data privacy, or the Mini Billy application, please contact us:</p>
-    <ul>
-      <li><strong>Developer / Company:</strong> AIMZCODE</li>
-      <li><strong>Contact Email:</strong> <a href="mailto:musab.dot@gmail.com">musab.dot@gmail.com</a></li>
-      <li><strong>Application:</strong> Mini Billy (Android &amp; iOS)</li>
-      <li><strong>Developer Portfolio / Information:</strong> Available on Google Play Store and Apple App Store</li>
-    </ul>
-  </section>
+        <h3>Offline use</h3>
+        <p>On Pro, Pro Max and Ultra Pro Max the App always works from a database on your device, so a lost connection never stops you from selling. While offline it keeps working on that local data for a limited time. When the internet returns, the App automatically checks your plan again and, on Pro Max and Ultra Pro Max, syncs the changes made offline to the cloud. On Pro, the re-check confirms your licence and sends any pending Google Drive backup.</p>
 
-  <footer>
-    <div>&copy; 2026 AIMZCODE. All rights reserved.</div>
-    <div>Mini Billy POS &bull; Privacy Policy</div>
-  </footer>
+        <h3>Your choices</h3>
+        <ul>
+          <li>You can use the Free plan without ever signing in. Signing in on Free links your Google account to the App and lets you back up to your Google Drive; it does not upload your shop data to our servers unless you are on a plan with cloud sync and turn it on.</li>
+          <li>You can turn off cloud sync, sign out, or export all your data as a JSON backup and CSV files at any time.</li>
+          <li>If a paid plan ends or you return to Free, your data stays on your device and you can keep selling within the Free plan limits.</li>
+        </ul>
+      </section>
 
+      <!-- SECTION 8 -->
+      <section id="section-8">
+        <h2>
+          <span class="section-title-wrap">8. Data Retention, Backups &amp; Complete Deletion</span>
+          <a href="#section-8" class="anchor-copy-btn" title="Copy link to this section">&#128279;</a>
+        </h2>
+        <h3>Data Ownership &amp; Retention</h3>
+        <p>Because all data is stored on your device, you maintain full and absolute ownership of your business data. Data is retained on your device for as long as you keep the App installed.</p>
+
+        <h3>Local Backups</h3>
+        <p>Mini Billy includes built-in safeguards to protect your business records against accidental loss:</p>
+        <ul>
+          <li><strong>Automatic Daily Rolling Backups:</strong> The App maintains local snapshots of your data on the device, keeping the last 7 daily backups automatically.</li>
+          <li><strong>Manual Backup &amp; Restore:</strong> You can create complete backup archives (including products, history, and photos) at any time and store them safely on your local storage, external SD card, or personal cloud storage.</li>
+        </ul>
+
+        <h3>Data Deletion</h3>
+        <p>In compliance with Google Play&rsquo;s Data Deletion Policy and Apple&rsquo;s User Privacy Guidelines:</p>
+        <ul>
+          <li>If you never signed in, we hold no account or server data, so there is nothing for us to delete.</li>
+          <li>If you created an account, you can <strong>delete your account in the App</strong> (More &rsaquo; Account &rsaquo; Delete account), or email us at the address in Section 12. We delete your account, plan record and all synced cloud data within 30 days, except payment records we must keep for accounting or tax law. Data on your own devices and in your own Google Drive is not affected; you can delete it yourself.</li>
+          <li>If a yearly plan ends and is not renewed, synced cloud data is kept for 30 days so you can renew or download it, then deleted.</li>
+          <li>To completely and permanently delete all data stored in Mini Billy, delete the data on your device by <strong>clearing the App Storage / Cache</strong> in your device&rsquo;s Settings or <strong>uninstall the App</strong>. All local databases, catalogs, customer lists, and backup files stored within the App&rsquo;s sandboxed directory will be immediately and irreversibly erased.</li>
+        </ul>
+      </section>
+
+      <!-- SECTION 9 -->
+      <section id="section-9">
+        <h2>
+          <span class="section-title-wrap">9. User Rights (GDPR, CCPA &amp; Global Privacy)</span>
+          <a href="#section-9" class="anchor-copy-btn" title="Copy link to this section">&#128279;</a>
+        </h2>
+        <p>Depending on your jurisdiction (such as the European Economic Area under GDPR, or California under CCPA/CPRA), you have rights regarding your personal data:</p>
+        <ul>
+          <li><strong>Right to Access &amp; Portability:</strong> You can export your complete product catalog, sales records, and business data at any time via the App&rsquo;s CSV and JSON backup export tools.</li>
+          <li><strong>Right to Rectification:</strong> You can edit, correct, or update any product, customer, or business information directly within the App interface.</li>
+          <li><strong>Right to Erasure (Right to Be Forgotten):</strong> You can delete individual records or wipe the database by clearing app data, and you can delete your account and cloud data as described in Section 8.</li>
+          <li><strong>Do Not Sell My Personal Information:</strong> We do not sell, rent, or trade personal data or business information under any circumstances, and we do not share data for cross-context behavioural advertising.</li>
+        </ul>
+      </section>
+
+      <!-- SECTION 10 -->
+      <section id="section-10">
+        <h2>
+          <span class="section-title-wrap">10. Children&rsquo;s Privacy</span>
+          <a href="#section-10" class="anchor-copy-btn" title="Copy link to this section">&#128279;</a>
+        </h2>
+        <p>Mini Billy is a point of sale and inventory management tool intended for commercial business use by adults and business owners. It is not directed at children under the age of 13 (or under 16 in the European Union). We do not knowingly solicit or collect data from children. If you believe that a child has provided personal information within the App on a device, such data can be permanently removed by clearing the App&rsquo;s data on that device.</p>
+      </section>
+
+      <!-- SECTION 11 -->
+      <section id="section-11">
+        <h2>
+          <span class="section-title-wrap">11. Changes to This Privacy Policy</span>
+          <a href="#section-11" class="anchor-copy-btn" title="Copy link to this section">&#128279;</a>
+        </h2>
+        <p>We may update this Privacy Policy from time to time to reflect modifications to the App, operating system requirements, or store developer guidelines. When updates are made, the revised policy will be posted on this page with an updated &ldquo;Last Updated&rdquo; date at the top. We encourage you to review this page periodically.</p>
+      </section>
+
+      <!-- SECTION 12 -->
+      <section id="section-12">
+        <h2>
+          <span class="section-title-wrap">12. Contact Information</span>
+          <a href="#section-12" class="anchor-copy-btn" title="Copy link to this section">&#128279;</a>
+        </h2>
+        <p>If you have any questions, suggestions, or concerns regarding this Privacy Policy, your data privacy, or the Mini Billy application, please contact us:</p>
+        <ul>
+          <li><strong>Developer / Company:</strong> AIMZCODE</li>
+          <li><strong>Contact Email:</strong> <a href="mailto:musab.dot@gmail.com">musab.dot@gmail.com</a></li>
+          <li><strong>Application:</strong> Mini Billy (Android &amp; iOS)</li>
+          <li><strong>Developer Portfolio / Information:</strong> Available on Google Play Store and Apple App Store</li>
+        </ul>
+      </section>
+
+      <!-- Card Footer -->
+      <footer>
+        <div class="footer-brand">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: var(--primary);">
+            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+            <line x1="8" y1="21" x2="16" y2="21"></line>
+            <line x1="12" y1="17" x2="12" y2="21"></line>
+          </svg>
+          <span>&copy; 2026 AIMZCODE. All rights reserved.</span>
+        </div>
+        <div>Mini Billy POS &bull; Official Compliance Privacy Policy</div>
+      </footer>
+
+    </main>
+
+  </div>
 </div>
+
+<!-- Back to Top Button -->
+<button class="back-to-top" id="back-to-top" aria-label="Back to Top" title="Back to top">
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+    <polyline points="18 15 12 9 6 15"></polyline>
+  </svg>
+</button>
+
+<script>
+  // Mobile Drawer Toggle
+  const mobileTocBtn = document.getElementById('mobile-toc-btn');
+  const sidebarDrawer = document.getElementById('sidebar-drawer');
+
+  if (mobileTocBtn && sidebarDrawer) {
+    mobileTocBtn.addEventListener('click', () => {
+      sidebarDrawer.classList.toggle('mobile-open');
+    });
+  }
+
+  // Scrollspy & Active Section Highlighting
+  const navLinks = document.querySelectorAll('.sidebar-nav-link');
+  const sections = document.querySelectorAll('section[id]');
+
+  function updateActiveToc() {
+    let currentId = '';
+    const scrollPos = window.scrollY + 120;
+
+    sections.forEach(sec => {
+      const top = sec.offsetTop;
+      const height = sec.offsetHeight;
+      if (scrollPos >= top && scrollPos < top + height) {
+        currentId = sec.getAttribute('id');
+      }
+    });
+
+    if (!currentId && sections.length > 0 && window.scrollY < sections[0].offsetTop) {
+      currentId = sections[0].getAttribute('id');
+    }
+
+    navLinks.forEach(link => {
+      if (link.getAttribute('data-section') === currentId) {
+        link.classList.add('active');
+      } else {
+        link.classList.remove('active');
+      }
+    });
+  }
+
+  window.addEventListener('scroll', updateActiveToc, { passive: true });
+  updateActiveToc();
+
+  // TOC Real-time Filter
+  const filterInput = document.getElementById('toc-filter');
+  const tocList = document.getElementById('toc-list');
+  const tocItems = tocList ? tocList.querySelectorAll('.sidebar-nav-item') : [];
+
+  if (filterInput) {
+    filterInput.addEventListener('input', (e) => {
+      const term = e.target.value.toLowerCase().trim();
+      tocItems.forEach(item => {
+        const text = item.textContent.toLowerCase();
+        if (text.includes(term)) {
+          item.style.display = '';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+    });
+  }
+
+  // Copy Anchor Link functionality
+  const copyButtons = document.querySelectorAll('.anchor-copy-btn');
+  copyButtons.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      const href = btn.getAttribute('href');
+      const url = window.location.origin + window.location.pathname + href;
+      navigator.clipboard.writeText(url).then(() => {
+        const originalText = btn.textContent;
+        btn.textContent = '✓';
+        btn.title = 'Link copied to clipboard!';
+        setTimeout(() => {
+          btn.textContent = originalText;
+          btn.title = 'Copy link to this section';
+        }, 2000);
+      }).catch(() => {});
+    });
+  });
+
+  // Back to Top Button visibility & action
+  const backToTopBtn = document.getElementById('back-to-top');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 300) {
+      backToTopBtn.classList.add('visible');
+    } else {
+      backToTopBtn.classList.remove('visible');
+    }
+  }, { passive: true });
+
+  if (backToTopBtn) {
+    backToTopBtn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
+</script>
 
 </body>
 </html>
